@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValueFinder Hub - Compare Top-Rated Products & Best Deals</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap-custom.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light py-3">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <div class="logo-icon bg-primary rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;">
+                        <i class="bi bi-search text-white"></i>
+                    </div>
+                    <div>
+                        <span class="fw-bold fs-4 text-primary">ValueFinder</span>
+                        <span class="d-block fs-6 text-muted" style="margin-top: -5px;">Hub</span>
+                    </div>
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Main Navigation -->
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <!-- Search Bar -->
+                    <div class="mx-lg-4 flex-grow-1">
+                        <div class="search-wrapper position-relative">
+                            <input type="search" class="form-control search-input" placeholder="Search 10,000+ products across all categories...">
+                            <button class="btn btn-primary search-btn position-absolute">
+                                <i class="bi bi-search"></i>
+                            </button>
+                            <div class="search-results dropdown-menu w-100"></div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Links -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Categories
+                            </a>
+                            <div class="dropdown-menu mega-menu">
+                                <div class="row p-4">
+                                    <div class="col-lg-3">
+                                        <h6 class="dropdown-header">Popular Categories</h6>
+                                        <a class="dropdown-item" href="products.html?category=electronics">
+                                            <i class="bi bi-laptop me-2"></i>Electronics
+                                        </a>
+                                        <a class="dropdown-item" href="products.html?category=home-kitchen">
+                                            <i class="bi bi-house-door me-2"></i>Home & Kitchen
+                                        </a>
+                                        <a class="dropdown-item" href="products.html?category=health-fitness">
+                                            <i class="bi bi-heart-pulse me-2"></i>Health & Fitness
+                                        </a>
+                                        <a class="dropdown-item" href="products.html?category=fashion">
+                                            <i class="bi bi-bag me-2"></i>Fashion
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h6 class="dropdown-header">More Categories</h6>
+                                        <a class="dropdown-item" href="products.html?category=beauty">
+                                            <i class="bi bi-droplet me-2"></i>Beauty
+                                        </a>
+                                        <a class="dropdown-item" href="products.html?category=automotive">
+                                            <i class="bi bi-car-front me-2"></i>Automotive
+                                        </a>
+                                        <a class="dropdown-item" href="products.html?category=sports">
+                                            <i class="bi bi-bicycle me-2"></i>Sports
+                                        </a>
+                                        <a class="dropdown-item" href="products.html?category=baby-kids">
+                                            <i class="bi bi-emoji-smile me-2"></i>Baby & Kids
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Buying Guides</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-outline-primary" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                <i class="bi bi-person me-1"></i>Account
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-gradient-primary text-white py-5 py-lg-7">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Discover & Compare Top-Rated Products</h1>
+                    <p class="lead mb-4 opacity-90">Unbiased comparisons and deals from 50+ trusted retailers. Make informed decisions with our expert reviews.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#trending" class="btn btn-light btn-lg px-4">
+                            <i class="bi bi-lightning me-2"></i>Trending Now
+                        </a>
+                        <a href="products.html" class="btn btn-outline-light btn-lg px-4">
+                            Browse All Categories
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <!-- Rotating Value Propositions -->
+                    <div class="value-props-card bg-white text-dark rounded-3 p-4 shadow-lg">
+                        <div class="value-prop active">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-wrapper bg-primary rounded-circle p-3 me-3">
+                                    <i class="bi bi-shop text-white fs-4"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Compare prices from 50+ retailers</h3>
+                            </div>
+                            <p class="text-muted">Find the best deal across Amazon, Walmart, Target, Best Buy and more.</p>
+                        </div>
+                        <div class="value-prop">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-wrapper bg-success rounded-circle p-3 me-3">
+                                    <i class="bi bi-check-circle text-white fs-4"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Unbiased expert recommendations</h3>
+                            </div>
+                            <p class="text-muted">Our team tests and reviews products independently.</p>
+                        </div>
+                        <div class="value-prop">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-wrapper bg-warning rounded-circle p-3 me-3">
+                                    <i class="bi bi-tag text-white fs-4"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Latest deals and discounts</h3>
+                            </div>
+                            <p class="text-muted">Get real-time price alerts and exclusive offers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <div class="trust-bar py-3 bg-light">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-md-3 col-6">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-shield-check text-primary fs-4 me-2"></i>
+                        <span>Verified Prices</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-star-fill text-warning fs-4 me-2"></i>
+                        <span>Independent Reviews</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-lock-fill text-success fs-4 me-2"></i>
+                        <span>Secure Shopping</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-arrow-left-right text-info fs-4 me-2"></i>
+                        <span>Best Price Guarantee</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trending Now Section -->
+    <section id="trending" class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="h3 fw-bold">🔥 Trending Now</h2>
+                <a href="products.html" class="text-decoration-none">
+                    View All <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <div class="row g-4" id="trendingProducts">
+                <!-- Trending products loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Grid -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Browse by Category</h2>
+            <div class="row g-4" id="categoryGrid">
+                <!-- Categories loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Deal of the Day -->
+    <section class="py-5">
+        <div class="container">
+            <div class="deal-card bg-gradient-warning rounded-3 p-4 p-lg-5 text-white">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <span class="badge bg-white text-dark mb-3">🔥 Deal of the Day</span>
+                        <h3 class="h2 fw-bold mb-3">Up to 50% Off Premium Headphones</h3>
+                        <p class="mb-4">Limited time offer on top-rated noise-cancelling headphones from Sony, Bose, and more.</p>
+                        <div class="countdown-timer mb-4">
+                            <div class="d-flex gap-3">
+                                <div class="text-center">
+                                    <div class="countdown-box bg-white text-dark rounded-2 p-2">
+                                        <span class="fs-3 fw-bold" id="hours">12</span>
+                                    </div>
+                                    <small>Hours</small>
+                                </div>
+                                <div class="text-center">
+                                    <div class="countdown-box bg-white text-dark rounded-2 p-2">
+                                        <span class="fs-3 fw-bold" id="minutes">45</span>
+                                    </div>
+                                    <small>Minutes</small>
+                                </div>
+                                <div class="text-center">
+                                    <div class="countdown-box bg-white text-dark rounded-2 p-2">
+                                        <span class="fs-3 fw-bold" id="seconds">30</span>
+                                    </div>
+                                    <small>Seconds</small>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="product-detail.html?id=1" class="btn btn-light btn-lg px-4">
+                            Shop Now <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <img src="https://via.placeholder.com/300x300" alt="Deal Product" class="img-fluid rounded-3 shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recently Reviewed -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="h3 fw-bold mb-4">Recently Reviewed</h2>
+            <div class="row g-4" id="recentlyReviewed">
+                <!-- Recently reviewed products loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="#">
+                        <div class="logo-icon bg-primary rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;">
+                            <i class="bi bi-search text-white"></i>
+                        </div>
+                        <div>
+                            <span class="fw-bold fs-4 text-white">ValueFinder</span>
+                            <span class="d-block fs-6 text-light" style="margin-top: -5px;">Hub</span>
+                        </div>
+                    </a>
+                    <p class="text-light opacity-75">Unbiased product comparisons and deals from trusted retailers. We help you make informed purchasing decisions.</p>
+                    <div class="affiliate-disclosure mt-4 p-3 bg-dark border rounded">
+                        <small class="d-flex align-items-center">
+                            <i class="bi bi-info-circle me-2 text-primary"></i>
+                            <span>As an Amazon Associate & affiliate of other retailers, we earn from qualifying purchases.</span>
+                        </small>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="fw-bold mb-4">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="products.html?category=electronics" class="text-light text-decoration-none opacity-75">Electronics</a></li>
+                        <li class="mb-2"><a href="products.html?category=home-kitchen" class="text-light text-decoration-none opacity-75">Home & Kitchen</a></li>
+                        <li class="mb-2"><a href="products.html?category=health-fitness" class="text-light text-decoration-none opacity-75">Health & Fitness</a></li>
+                        <li class="mb-2"><a href="products.html?category=fashion" class="text-light text-decoration-none opacity-75">Fashion</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="fw-bold mb-4">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-light text-decoration-none opacity-75">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none opacity-75">Contact</a></li>
+                        <li class="mb-2"><a href="privacy-policy.html" class="text-light text-decoration-none opacity-75">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="terms.html" class="text-light text-decoration-none opacity-75">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="fw-bold mb-4">Stay Updated</h5>
+                    <p class="text-light opacity-75 mb-3">Get the best deals and price alerts directly to your inbox.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your email address">
+                        <button class="btn btn-primary" type="button">
+                            <i class="bi bi-envelope"></i>
+                        </button>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-light opacity-75"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-light opacity-75"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-light opacity-75"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-light opacity-75"><i class="bi bi-pinterest fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4 opacity-25">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 opacity-75">© 2024 ValueFinder Hub. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="d-flex align-items-center justify-content-md-end gap-3">
+                        <span class="opacity-75">Partner Retailers:</span>
+                        <div class="retailer-logos d-flex gap-2">
+                            <i class="bi bi-amazon text-warning fs-5"></i>
+                            <i class="bi bi-shop text-primary fs-5"></i>
+                            <i class="bi bi-basket text-danger fs-5"></i>
+                            <i class="bi bi-bag text-success fs-5"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" id="accountTabs">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-target="#login" data-bs-toggle="tab">Login</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-target="#register" data-bs-toggle="tab">Register</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content p-3">
+                        <div class="tab-pane fade show active" id="login">
+                            <form id="loginForm">
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="register">
+                            <form id="registerForm">
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Create Account</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    
+    <script>
+        // Initialize homepage
+        document.addEventListener('DOMContentLoaded', function() {
+            loadTrendingProducts();
+            loadCategories();
+            loadRecentlyReviewed();
+            initValuePropsRotation();
+            startDealCountdown();
+        });
+    </script>
+</body>
+</html>

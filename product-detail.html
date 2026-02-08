@@ -1,0 +1,435 @@
+<!-- Product Detail Template -->
+<div class="container py-5">
+    <div class="row">
+        <!-- Product Images -->
+        <div class="col-lg-6">
+            <div class="product-images">
+                <div class="main-image mb-3">
+                    <img id="mainProductImage" src="" class="img-fluid rounded-3 border" alt="">
+                </div>
+                <div class="thumbnail-images d-flex gap-2">
+                    <!-- Thumbnails will be loaded here -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Info -->
+        <div class="col-lg-6">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#" id="categoryBreadcrumb">Category</a></li>
+                    <li class="breadcrumb-item active" id="productTitleBreadcrumb">Product</li>
+                </ol>
+            </nav>
+            
+            <h1 id="productTitle" class="h2 fw-bold mb-3"></h1>
+            
+            <div class="d-flex align-items-center mb-3">
+                <div id="productRating" class="me-3"></div>
+                <span class="text-muted" id="reviewCount"></span>
+                <span class="badge bg-light text-dark border ms-3" id="productCategory"></span>
+            </div>
+            
+            <div class="brand-section mb-4">
+                <span class="text-muted">Brand:</span>
+                <strong id="productBrand"></strong>
+                <span class="badge bg-success ms-2" id="bestSellerBadge" style="display: none;">Best Seller</span>
+            </div>
+            
+            <!-- Price Comparison -->
+            <div class="price-comparison-card card border-0 shadow-sm mb-4">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">Compare Prices</h5>
+                </div>
+                <div class="card-body">
+                    <div id="retailerPrices">
+                        <!-- Retailer prices loaded here -->
+                    </div>
+                    <div class="best-price-alert mt-3 p-3 bg-success bg-opacity-10 rounded">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success fs-4 me-3"></i>
+                            <div>
+                                <h6 class="mb-1">Best Price Found</h6>
+                                <div class="d-flex align-items-center">
+                                    <span id="bestPriceRetailer" class="fw-bold"></span>
+                                    <span class="ms-2" id="bestPriceAmount"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="action-buttons mb-4">
+                <div class="d-grid gap-2 d-md-flex">
+                    <button class="btn btn-primary btn-lg flex-fill" onclick="buyAtBestPrice()">
+                        <i class="bi bi-cart3 me-2"></i>Buy at Best Price
+                    </button>
+                    <button class="btn btn-outline-primary btn-lg" onclick="addToComparison(currentProductId)">
+                        <i class="bi bi-plus-circle me-2"></i>Compare
+                    </button>
+                    <button class="btn btn-light btn-lg" onclick="togglePriceAlert()">
+                        <i class="bi bi-bell me-2"></i>Price Alert
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Product Highlights -->
+            <div class="product-highlights mb-4">
+                <h5 class="mb-3">Key Features</h5>
+                <ul id="productFeatures" class="list-unstyled"></ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Product Tabs -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <ul class="nav nav-tabs" id="productTabs">
+                <li class="nav-item">
+                    <button class="nav-link active" data-bs-target="#description" data-bs-toggle="tab">Description</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-target="#specs" data-bs-toggle="tab">Specifications</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-target="#reviews" data-bs-toggle="tab">Reviews</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-target="#alternatives" data-bs-toggle="tab">Similar Products</button>
+                </li>
+            </ul>
+            
+            <div class="tab-content p-4 border border-top-0 rounded-bottom">
+                <div class="tab-pane fade show active" id="description">
+                    <div id="productDescription"></div>
+                </div>
+                
+                <div class="tab-pane fade" id="specs">
+                    <table class="table" id="specsTable">
+                        <!-- Specifications loaded here -->
+                    </table>
+                </div>
+                
+                <div class="tab-pane fade" id="reviews">
+                    <div id="productReviews"></div>
+                </div>
+                
+                <div class="tab-pane fade" id="alternatives">
+                    <div class="row" id="similarProducts">
+                        <!-- Similar products loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentProductId = null;
+    let currentProduct = null;
+
+    // Load product detail
+    document.addEventListener('DOMContentLoaded', function() {
+        const params = getUrlParams();
+        currentProductId = params.id;
+        
+        if (currentProductId) {
+            loadProductDetail(currentProductId);
+        } else {
+            window.location.href = 'products.html';
+        }
+    });
+
+    function loadProductDetail(productId) {
+        const product = productManager.getProductById(productId);
+        if (!product) {
+            window.location.href = 'products.html';
+            return;
+        }
+        
+        currentProduct = product;
+        productManager.incrementViews(productId);
+        
+        // Update page title
+        document.title = `${product.name} - Price Comparison & Reviews | ${CONFIG.siteName}`;
+        
+        // Update breadcrumbs
+        document.getElementById('categoryBreadcrumb').href = `products.html?category=${product.category}`;
+        document.getElementById('categoryBreadcrumb').textContent = 
+            productManager.categories.find(c => c.id === product.category)?.name || product.category;
+        document.getElementById('productTitleBreadcrumb').textContent = product.name.substring(0, 30) + '...';
+        
+        // Update main product info
+        document.getElementById('productTitle').textContent = product.name;
+        document.getElementById('productRating').innerHTML = generateStarRating(product.rating);
+        document.getElementById('reviewCount').textContent = `(${product.reviewCount || 0} reviews)`;
+        document.getElementById('productCategory').textContent = product.category;
+        document.getElementById('productBrand').textContent = product.brand;
+        
+        if (product.isBestSeller) {
+            document.getElementById('bestSellerBadge').style.display = 'inline-block';
+        }
+        
+        // Load images
+        document.getElementById('mainProductImage').src = product.image;
+        
+        // Load all images
+        const thumbnailsContainer = document.querySelector('.thumbnail-images');
+        const images = [product.image, ...(product.additionalImages || [])];
+        thumbnailsContainer.innerHTML = images.map((img, index) => `
+            <img src="${img}" class="img-thumbnail ${index === 0 ? 'active' : ''}" 
+                 onclick="changeProductImage('${img}')"
+                 style="width: 80px; height: 80px; object-fit: cover; cursor: pointer;">
+        `).join('');
+        
+        // Load retailer prices
+        loadRetailerPrices(product);
+        
+        // Load features
+        const featuresContainer = document.getElementById('productFeatures');
+        featuresContainer.innerHTML = (product.features || []).map(feature => `
+            <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>${feature}
+            </li>
+        `).join('');
+        
+        // Load description
+        document.getElementById('productDescription').innerHTML = product.description || 'No description available.';
+        
+        // Load specifications
+        loadSpecifications(product);
+        
+        // Load reviews
+        loadReviews(product);
+        
+        // Load similar products
+        loadSimilarProducts(product);
+        
+        // Add schema markup
+        addProductSchema(product);
+    }
+
+    function changeProductImage(src) {
+        document.getElementById('mainProductImage').src = src;
+        document.querySelectorAll('.thumbnail-images img').forEach(img => {
+            img.classList.remove('active');
+            img.classList.remove('border-primary');
+        });
+        event.target.classList.add('active');
+        event.target.classList.add('border-primary');
+    }
+
+    function loadRetailerPrices(product) {
+        const container = document.getElementById('retailerPrices');
+        if (!product.retailers || product.retailers.length === 0) {
+            container.innerHTML = '<p class="text-muted">No retailer prices available.</p>';
+            return;
+        }
+        
+        // Sort by price
+        const sortedRetailers = [...product.retailers].sort((a, b) => a.price - b.price);
+        const bestPrice = sortedRetailers[0];
+        
+        container.innerHTML = sortedRetailers.map(retailer => `
+            <div class="retailer-price-row d-flex align-items-center justify-content-between mb-2 p-2 ${retailer.name === bestPrice.name ? 'bg-primary bg-opacity-10 rounded' : ''}">
+                <div class="d-flex align-items-center">
+                    ${CONFIG.retailerLogos[retailer.name.toLowerCase()] || '<i class="bi bi-shop"></i>'}
+                    <span class="ms-2">${retailer.name}</span>
+                    ${retailer.inStock ? 
+                        '<span class="badge bg-success ms-2">In Stock</span>' : 
+                        '<span class="badge bg-secondary ms-2">Out of Stock</span>'}
+                </div>
+                <div class="d-flex align-items-center">
+                    <span class="fw-bold ${retailer.name === bestPrice.name ? 'text-primary' : ''}">
+                        ${formatCurrency(retailer.price)}
+                    </span>
+                    ${retailer.originalPrice && retailer.originalPrice > retailer.price ? 
+                        `<small class="text-muted text-decoration-line-through ms-2">${formatCurrency(retailer.originalPrice)}</small>` : ''}
+                    <button class="btn btn-sm btn-outline-primary ms-3"
+                            onclick="window.openAffiliateLink('${product.id}', '${retailer.name.toLowerCase()}')">
+                        Visit Store
+                    </button>
+                </div>
+            </div>
+        `).join('');
+        
+        // Update best price display
+        document.getElementById('bestPriceRetailer').textContent = bestPrice.name;
+        document.getElementById('bestPriceAmount').textContent = formatCurrency(bestPrice.price);
+    }
+
+    function buyAtBestPrice() {
+        if (!currentProduct || !currentProduct.retailers) return;
+        
+        const bestPrice = currentProduct.retailers.reduce((best, current) => {
+            if (!best || current.price < best.price) return current;
+            return best;
+        });
+        
+        window.openAffiliateLink(currentProduct.id, bestPrice.name.toLowerCase());
+    }
+
+    function togglePriceAlert() {
+        const userData = JSON.parse(localStorage.getItem('userData') || '{}');
+        if (!userData.priceAlerts) userData.priceAlerts = [];
+        
+        const existingAlert = userData.priceAlerts.find(alert => alert.productId === currentProductId);
+        
+        if (existingAlert) {
+            // Remove alert
+            userData.priceAlerts = userData.priceAlerts.filter(alert => alert.productId !== currentProductId);
+            localStorage.setItem('userData', JSON.stringify(userData));
+            showToast('Price alert removed', 'info');
+        } else {
+            // Add alert
+            const bestPrice = productManager.getBestProductPrice(currentProduct);
+            userData.priceAlerts.push({
+                productId: currentProductId,
+                productName: currentProduct.name,
+                targetPrice: bestPrice * 0.9, // 10% below current price
+                createdAt: new Date().toISOString()
+            });
+            localStorage.setItem('userData', JSON.stringify(userData));
+            showToast('Price alert set! We\'ll notify you when price drops.', 'success');
+        }
+    }
+
+    function loadSpecifications(product) {
+        const table = document.getElementById('specsTable');
+        if (!product.specifications || Object.keys(product.specifications).length === 0) {
+            table.innerHTML = '<tr><td class="text-muted">No specifications available.</td></tr>';
+            return;
+        }
+        
+        table.innerHTML = Object.entries(product.specifications).map(([key, value]) => `
+            <tr>
+                <th scope="row" class="w-25">${key}</th>
+                <td>${value}</td>
+            </tr>
+        `).join('');
+    }
+
+    function loadReviews(product) {
+        const container = document.getElementById('productReviews');
+        
+        if (!product.reviews || product.reviews.length === 0) {
+            container.innerHTML = `
+                <div class="text-center py-4">
+                    <i class="bi bi-chat-square-text fs-1 text-muted mb-3"></i>
+                    <h4>No reviews yet</h4>
+                    <p class="text-muted">Be the first to review this product!</p>
+                </div>
+            `;
+            return;
+        }
+        
+        // Calculate average rating
+        const avgRating = product.reviews.reduce((sum, review) => sum + review.rating, 0) / product.reviews.length;
+        
+        container.innerHTML = `
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="card text-center p-4">
+                        <h3 class="display-4 fw-bold text-primary">${avgRating.toFixed(1)}</h3>
+                        <div class="mb-3">${generateStarRating(avgRating)}</div>
+                        <p class="text-muted">${product.reviews.length} reviews</p>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="rating-breakdown">
+                        ${[5,4,3,2,1].map(stars => {
+                            const count = product.reviews.filter(r => Math.floor(r.rating) === stars).length;
+                            const percentage = (count / product.reviews.length) * 100;
+                            return `
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="small me-2">${stars} stars</span>
+                                    <div class="progress flex-grow-1" style="height: 8px;">
+                                        <div class="progress-bar bg-warning" style="width: ${percentage}%"></div>
+                                    </div>
+                                    <span class="small ms-2" style="width: 40px;">${count}</span>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reviews-list">
+                ${product.reviews.slice(0, 5).map(review => `
+                    <div class="review-card border-bottom pb-4 mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <div>
+                                <strong>${review.author}</strong>
+                                <span class="text-muted ms-2">${review.date}</span>
+                                ${review.verified ? '<span class="badge bg-success ms-2">Verified Purchase</span>' : ''}
+                            </div>
+                            <div>${generateStarRating(review.rating)}</div>
+                        </div>
+                        <h6 class="fw-bold">${review.title}</h6>
+                        <p>${review.content}</p>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+
+    function loadSimilarProducts(product) {
+        const container = document.getElementById('similarProducts');
+        const similar = productManager.products
+            .filter(p => p.category === product.category && p.id !== product.id)
+            .slice(0, 4);
+        
+        container.innerHTML = similar.map(p => renderProductCard(p)).join('');
+    }
+
+    function addProductSchema(product) {
+        const schema = {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": product.name,
+            "image": [product.image, ...(product.additionalImages || [])],
+            "description": product.description?.substring(0, 200),
+            "brand": {
+                "@type": "Brand",
+                "name": product.brand
+            },
+            "review": product.reviews?.map(review => ({
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": review.rating,
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": review.author
+                },
+                "reviewBody": review.content
+            })),
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": product.rating,
+                "reviewCount": product.reviewCount || 0
+            },
+            "offers": product.retailers?.map(retailer => ({
+                "@type": "Offer",
+                "url": retailer.affiliateUrl,
+                "priceCurrency": "USD",
+                "price": retailer.price,
+                "availability": retailer.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+                "seller": {
+                    "@type": "Organization",
+                    "name": retailer.name
+                }
+            }))
+        };
+
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(schema);
+        document.head.appendChild(script);
+    }
+</script>
