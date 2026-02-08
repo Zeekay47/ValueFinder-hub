@@ -1,0 +1,87 @@
+[
+  {
+    "id": "1",
+    "title": "How to Choose the Right Laptop in 2024",
+    "category": "Electronics",
+    "excerpt": "Complete guide to selecting the perfect laptop for work, gaming, or school based on your needs and budget.",
+    "image": "https://images.unsplash.com/photo-1515343480029-43cdfe6b6aae?w=800&auto=format&fit=crop",
+    "imageCaption": "Modern laptop setup for productivity",
+    "readTime": "8 min read",
+    "date": "January 15, 2024",
+    "publishedDate": "2024-01-15",
+    "updatedDate": "2024-01-15",
+    "author": {
+      "name": "Sarah Johnson",
+      "role": "Technology Editor",
+      "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&auto=format&fit=crop",
+      "bio": "Sarah has been reviewing tech products for over 10 years and specializes in consumer electronics and computing devices."
+    },
+    "introduction": "<p>Choosing the right laptop can be overwhelming with so many options available. This guide will walk you through everything you need to know to make an informed decision based on your specific needs, whether you're a student, professional, gamer, or casual user.</p>",
+    "tableOfContents": [
+      "Determine Your Needs",
+      "Key Specifications to Consider",
+      "Operating System Options",
+      "Budget Considerations",
+      "Top Recommendations by Category"
+    ],
+    "content": [
+      {
+        "title": "Determine Your Needs",
+        "content": "<p>Before looking at specific models, identify what you'll primarily use the laptop for:</p><ul><li><strong>General Use:</strong> Web browsing, email, streaming, basic productivity</li><li><strong>Business/Professional:</strong> Office applications, video conferencing, data analysis</li><li><strong>Creative Work:</strong> Photo/video editing, graphic design, music production</li><li><strong>Gaming:</strong> AAA gaming titles, eSports, streaming</li><li><strong>Student:</strong> Note-taking, research, presentations, portability</li></ul>"
+      },
+      {
+        "title": "Key Specifications to Consider",
+        "content": "<p>Understanding laptop specifications is crucial for making the right choice:</p><h4>Processor (CPU)</h4><p>Intel Core i5 or AMD Ryzen 5 for most users. i7/Ryzen 7 for demanding tasks. i9/Ryzen 9 for professional work.</p><h4>Memory (RAM)</h4><p>8GB minimum for most users. 16GB recommended for multitasking and creative work. 32GB+ for professional applications.</p><h4>Storage</h4><p>SSD (Solid State Drive) is essential for speed. 256GB minimum, 512GB recommended, 1TB+ for large files.</p><h4>Display</h4><p>1080p (Full HD) is standard. Consider 1440p or 4K for creative work. Refresh rate (60Hz, 120Hz, 144Hz) matters for gaming.</p>",
+        "products": [
+          {
+            "name": "Apple MacBook Air M2",
+            "price": 999,
+            "image": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=400",
+            "description": "Excellent for students and professionals",
+            "link": "product-detail.html?id=1"
+          },
+          {
+            "name": "Dell XPS 13",
+            "price": 899,
+            "image": "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=400",
+            "description": "Premium Windows ultrabook",
+            "link": "#"
+          }
+        ]
+      }
+    ],
+    "conclusion": "<p>The right laptop depends on your specific needs and budget. For most users, a laptop with an Intel Core i5 or AMD Ryzen 5 processor, 8-16GB RAM, and a 512GB SSD will provide excellent performance. Always consider portability, battery life, and build quality alongside specifications.</p>"
+  },
+  {
+    "id": "2",
+    "title": "Best Budget Headphones Under $100",
+    "category": "Audio",
+    "excerpt": "Top picks for quality audio without breaking the bank. Find the perfect headphones for music, gaming, or calls.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop",
+    "readTime": "6 min read",
+    "date": "January 10, 2024",
+    "author": {
+      "name": "Michael Chen",
+      "role": "Audio Expert",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100",
+      "bio": "Michael specializes in audio equipment and has tested hundreds of headphones and speakers over his 8-year career."
+    },
+    "introduction": "<p>Great sound quality doesn't have to be expensive. In this guide, we'll show you the best headphones under $100 that deliver exceptional value and performance.</p>"
+  },
+  {
+    "id": "3",
+    "title": "Essential Kitchen Appliances Every Home Needs",
+    "category": "Home & Kitchen",
+    "excerpt": "Must-have appliances for efficient and enjoyable cooking. Build your perfect kitchen setup.",
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800",
+    "readTime": "10 min read",
+    "date": "January 5, 2024",
+    "author": {
+      "name": "Jessica Williams",
+      "role": "Home & Kitchen Expert",
+      "avatar": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100",
+      "bio": "Jessica has been reviewing home appliances for 12 years and loves helping people create functional kitchen spaces."
+    },
+    "introduction": "<p>Building a well-equipped kitchen doesn't require buying every gadget on the market. This guide focuses on the essential appliances that will make cooking easier and more enjoyable.</p>"
+  }
+]
