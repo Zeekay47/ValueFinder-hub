@@ -1,186 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebSite">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ValueFinder Hub - Compare Top-Rated Products & Best Deals</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>ValueFinder Hub - Compare Prices & Find Best Deals Across All Categories</title>
+    <meta name="description" content="Unbiased product comparisons from 50+ retailers. Compare prices, read expert reviews, and find the best deals on electronics, home goods, fashion, beauty, and more.">
+    <meta name="keywords" content="price comparison, product reviews, best deals, shopping, Amazon, Walmart, Target, Best Buy, electronics, home goods, fashion, beauty">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://valuefinderhub.com/">
+    <meta property="og:title" content="ValueFinder Hub - Compare Prices & Find Best Deals">
+    <meta property="og:description" content="Unbiased product comparisons from 50+ retailers. Find the best prices across all categories.">
+    <meta property="og:image" content="https://valuefinderhub.com/images/og-images/homepage-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://valuefinderhub.com/">
+    <meta property="twitter:title" content="ValueFinder Hub - Compare Prices & Find Best Deals">
+    <meta property="twitter:description" content="Unbiased product comparisons from 50+ retailers. Find the best prices across all categories.">
+    <meta property="twitter:image" content="https://valuefinderhub.com/images/og-images/homepage-og.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://valuefinderhub.com/">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ValueFinder Hub",
+        "url": "https://valuefinderhub.com/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://valuefinderhub.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "description": "Unbiased product comparisons and price tracking across multiple retailers",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ValueFinder Hub",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://valuefinderhub.com/images/logos/logo.png"
+            }
+        }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
-    
-    <style>
-        /* Inline CSS for immediate styling while external loads */
-        :root {
-            --primary-color: #2563EB;
-            --primary-light: #3B82F6;
-            --primary-dark: #1D4ED8;
-            --secondary-color: #64748B;
-            --accent-color: #10B981;
-            --warning-color: #F59E0B;
-            --danger-color: #EF4444;
-            --background-color: #F9FAFB;
-            --card-background: #FFFFFF;
-            --text-primary: #1F2937;
-            --text-secondary: #6B7280;
-            --border-color: #E5E7EB;
-            --success-color: #10B981;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-primary);
-            background-color: var(--background-color);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .bg-gradient-primary {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)) !important;
-            color: white;
-        }
-        
-        .navbar {
-            padding: 1rem 0;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .hero-section {
-            padding: 5rem 0;
-        }
-        
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-        }
-        
-        .btn-outline-primary {
-            color: var(--primary-color);
-            border-color: var(--primary-color);
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-        }
-        
-        .search-input {
-            border-radius: 50px;
-            padding: 0.75rem 1.5rem;
-            border: 2px solid var(--border-color);
-        }
-        
-        .value-props-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            color: var(--text-primary);
-        }
-        
-        .trust-bar {
-            padding: 1.5rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .trust-bar i {
-            color: var(--primary-color);
-            margin-right: 0.5rem;
-        }
-        
-        .logo-icon {
-            background: var(--primary-color);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .logo-icon i {
-            color: white;
-            font-size: 1.2rem;
-        }
-        
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-        
-        .lead {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-        }
-    </style>
+    <link href="css/bootstrap-custom.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header & Navigation -->
-    <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg">
+    <header class="sticky-top bg-white shadow-sm" role="banner">
+        <nav class="navbar navbar-expand-lg navbar-light py-3" aria-label="Main navigation">
             <div class="container">
-                <!-- Logo -->
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <div class="logo-icon me-2">
-                        <i class="bi bi-search"></i>
+                <!-- Logo with Schema.org markup -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html" itemprop="url">
+                    <div class="logo-icon bg-primary rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;" aria-label="ValueFinder Hub Logo">
+                        <i class="bi bi-search text-white" aria-hidden="true"></i>
                     </div>
-                    <div>
+                    <div itemprop="name">
                         <span class="fw-bold fs-4 text-primary">ValueFinder</span>
                         <span class="d-block fs-6 text-muted" style="margin-top: -5px;">Hub</span>
                     </div>
                 </a>
 
                 <!-- Mobile Toggle -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!-- Main Navigation -->
                 <div class="collapse navbar-collapse" id="navbarMain">
                     <!-- Search Bar -->
-                    <div class="mx-lg-4 flex-grow-1">
-                        <div class="search-wrapper position-relative">
-                        <input type="search" class="form-control search-input" placeholder="Search 10,000+ products across all categories...">
-                        <button class="btn btn-primary search-btn position-absolute">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
+                    <div class="mx-lg-4 flex-grow-1" role="search">
+                        <form id="searchForm" action="search.html" method="get" class="position-relative">
+                            <label for="searchInput" class="visually-hidden">Search products</label>
+                            <input type="search" id="searchInput" class="form-control search-input" 
+                                   placeholder="Search 10,000+ products across all categories..." 
+                                   aria-label="Search products" name="q">
+                            <button type="submit" class="btn btn-primary search-btn position-absolute" aria-label="Search">
+                                <i class="bi bi-search" aria-hidden="true"></i>
+                            </button>
+                            <div class="search-results dropdown-menu w-100" role="listbox" aria-label="Search results"></div>
+                        </form>
                     </div>
 
                     <!-- Navigation Links -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
                                 Categories
                             </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Electronics</a>
-                                <a class="dropdown-item" href="#">Home & Kitchen</a>
-                                <a class="dropdown-item" href="#">Health & Fitness</a>
-                                <a class="dropdown-item" href="#">Fashion</a>
-                                <a class="dropdown-item" href="#">Beauty</a>
-                                <a class="dropdown-item" href="#">Automotive</a>
-                                <a class="dropdown-item" href="#">Sports</a>
-                                <a class="dropdown-item" href="#">Baby & Kids</a>
+                            <div class="dropdown-menu mega-menu" aria-labelledby="categoriesDropdown">
+                                <div class="row p-4">
+                                    <div class="col-lg-3">
+                                        <h2 class="h6 dropdown-header">Popular Categories</h2>
+                                        <a class="dropdown-item" href="category.html?cat=electronics" itemprop="url">
+                                            <i class="bi bi-laptop me-2" aria-hidden="true"></i>Electronics
+                                        </a>
+                                        <a class="dropdown-item" href="category.html?cat=home-kitchen">
+                                            <i class="bi bi-house-door me-2" aria-hidden="true"></i>Home & Kitchen
+                                        </a>
+                                        <a class="dropdown-item" href="category.html?cat=health-fitness">
+                                            <i class="bi bi-heart-pulse me-2" aria-hidden="true"></i>Health & Fitness
+                                        </a>
+                                        <a class="dropdown-item" href="category.html?cat=fashion">
+                                            <i class="bi bi-bag me-2" aria-hidden="true"></i>Fashion
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h2 class="h6 dropdown-header">More Categories</h2>
+                                        <a class="dropdown-item" href="category.html?cat=beauty">
+                                            <i class="bi bi-droplet me-2" aria-hidden="true"></i>Beauty
+                                        </a>
+                                        <a class="dropdown-item" href="category.html?cat=automotive">
+                                            <i class="bi bi-car-front me-2" aria-hidden="true"></i>Automotive
+                                        </a>
+                                        <a class="dropdown-item" href="category.html?cat=sports">
+                                            <i class="bi bi-bicycle me-2" aria-hidden="true"></i>Sports
+                                        </a>
+                                        <a class="dropdown-item" href="category.html?cat=baby-kids">
+                                            <i class="bi bi-emoji-smile me-2" aria-hidden="true"></i>Baby & Kids
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h2 class="h6 dropdown-header">Office & Tools</h2>
+                                        <a class="dropdown-item" href="category.html?cat=office-supplies">
+                                            <i class="bi bi-briefcase me-2" aria-hidden="true"></i>Office Supplies
+                                        </a>
+                                        <a class="dropdown-item" href="category.html?cat=tools">
+                                            <i class="bi bi-tools me-2" aria-hidden="true"></i>Tools & Home Improvement
+                                        </a>
+                                        <a class="dropdown-item" href="category.html?cat=pet-supplies">
+                                            <i class="bi bi-egg-fried me-2" aria-hidden="true"></i>Pet Supplies
+                                        </a>
+                                        <a class="dropdown-item" href="category.html?cat=toys-games">
+                                            <i class="bi bi-joystick me-2" aria-hidden="true"></i>Toys & Games
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h2 class="h6 dropdown-header">Seasonal</h2>
+                                        <a class="dropdown-item" href="category.html?cat=seasonal-holiday">
+                                            <i class="bi bi-gift me-2" aria-hidden="true"></i>Holiday Deals
+                                        </a>
+                                        <a class="dropdown-item" href="category.html?cat=back-to-school">
+                                            <i class="bi bi-backpack me-2" aria-hidden="true"></i>Back to School
+                                        </a>
+                                        <a class="dropdown-item" href="category.html?cat=summer-essentials">
+                                            <i class="bi bi-sun me-2" aria-hidden="true"></i>Summer Essentials
+                                        </a>
+                                        <a class="dropdown-item" href="category.html?cat=winter-gear">
+                                            <i class="bi bi-snow me-2" aria-hidden="true"></i>Winter Gear
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Buying Guides</a>
+                            <a class="nav-link" href="buying-guides.html">Buying Guides</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About</a>
                         </li>
                         <li class="nav-item ms-lg-3">
-                            <a class="btn btn-outline-primary" href="#">
-                                <i class="bi bi-person me-1"></i>Account
+                            <a class="btn btn-outline-primary" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                <i class="bi bi-person me-1" aria-hidden="true"></i>Account
                             </a>
                         </li>
                     </ul>
@@ -189,187 +195,300 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section bg-gradient-primary text-white">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">Discover & Compare Top-Rated Products</h1>
-                    <p class="lead mb-4">Unbiased comparisons and deals from 50+ trusted retailers. Make informed decisions with our expert reviews.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#trending" class="btn btn-light btn-lg px-4">
-                            <i class="bi bi-lightning me-2"></i>Trending Now
-                        </a>
-                        <a href="products.html" class="btn btn-outline-light btn-lg px-4">
-                            Browse All Categories
-                        </a>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section bg-gradient-primary text-white py-5 py-lg-7" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 id="hero-heading" class="display-4 fw-bold mb-4">Discover & Compare Top-Rated Products</h1>
+                        <p class="lead mb-4 opacity-90">Unbiased comparisons and deals from 50+ trusted retailers. Make informed decisions with our expert reviews.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#trending" class="btn btn-light btn-lg px-4">
+                                <i class="bi bi-lightning me-2" aria-hidden="true"></i>Trending Now
+                            </a>
+                            <a href="products.html" class="btn btn-outline-light btn-lg px-4">
+                                Browse All Categories
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-6 mt-5 mt-lg-0">
-                    <!-- Value Propositions Card -->
-                    <div class="value-props-card">
-                        <div class="d-flex align-items-center mb-4">
-                            <div class="bg-primary rounded-circle p-3 me-3">
-                                <i class="bi bi-shop text-white fs-4"></i>
+                    <div class="col-lg-6 mt-5 mt-lg-0">
+                        <!-- Rotating Value Propositions -->
+                        <div class="value-props-card bg-white text-dark rounded-3 p-4 shadow-lg">
+                            <div class="value-prop active">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-wrapper bg-primary rounded-circle p-3 me-3" aria-hidden="true">
+                                        <i class="bi bi-shop text-white fs-4"></i>
+                                    </div>
+                                    <h2 class="h5 mb-0">Compare prices from 50+ retailers</h2>
+                                </div>
+                                <p class="text-muted">Find the best deal across Amazon, Walmart, Target, Best Buy and more.</p>
                             </div>
-                            <div>
-                                <h3 class="h5 mb-1">Compare prices from 50+ retailers</h3>
-                                <p class="text-muted mb-0">Find the best deal across Amazon, Walmart, Target, Best Buy and more.</p>
+                            <div class="value-prop">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-wrapper bg-success rounded-circle p-3 me-3" aria-hidden="true">
+                                        <i class="bi bi-check-circle text-white fs-4"></i>
+                                    </div>
+                                    <h2 class="h5 mb-0">Unbiased expert recommendations</h2>
+                                </div>
+                                <p class="text-muted">Our team tests and reviews products independently.</p>
                             </div>
-                        </div>
-                        
-                        <div class="d-flex align-items-center mb-4">
-                            <div class="bg-success rounded-circle p-3 me-3">
-                                <i class="bi bi-check-circle text-white fs-4"></i>
-                            </div>
-                            <div>
-                                <h3 class="h5 mb-1">Unbiased expert recommendations</h3>
-                                <p class="text-muted mb-0">Our team tests and reviews products independently.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="d-flex align-items-center">
-                            <div class="bg-warning rounded-circle p-3 me-3">
-                                <i class="bi bi-tag text-white fs-4"></i>
-                            </div>
-                            <div>
-                                <h3 class="h5 mb-1">Latest deals and discounts</h3>
-                                <p class="text-muted mb-0">Get real-time price alerts and exclusive offers.</p>
+                            <div class="value-prop">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-wrapper bg-warning rounded-circle p-3 me-3" aria-hidden="true">
+                                        <i class="bi bi-tag text-white fs-4"></i>
+                                    </div>
+                                    <h2 class="h5 mb-0">Latest deals and discounts</h2>
+                                </div>
+                                <p class="text-muted">Get real-time price alerts and exclusive offers.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Trust Indicators -->
-    <div class="trust-bar bg-light">
-        <div class="container">
-            <div class="row g-4 text-center">
-                <div class="col-md-3 col-6">
-                    <div class="d-flex align-items-center justify-content-center">
-                        <i class="bi bi-shield-check fs-4 me-2"></i>
-                        <span class="fw-medium">Verified Prices</span>
+        <!-- Trust Indicators -->
+        <div class="trust-bar py-3 bg-light" role="region" aria-label="Trust indicators">
+            <div class="container">
+                <div class="row g-4 text-center">
+                    <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-shield-check text-primary fs-4 me-2" aria-hidden="true"></i>
+                            <span>Verified Prices</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="d-flex align-items-center justify-content-center">
-                        <i class="bi bi-star-fill text-warning fs-4 me-2"></i>
-                        <span class="fw-medium">Independent Reviews</span>
+                    <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-star-fill text-warning fs-4 me-2" aria-hidden="true"></i>
+                            <span>Independent Reviews</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="d-flex align-items-center justify-content-center">
-                        <i class="bi bi-lock-fill text-success fs-4 me-2"></i>
-                        <span class="fw-medium">Secure Shopping</span>
+                    <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-lock-fill text-success fs-4 me-2" aria-hidden="true"></i>
+                            <span>Secure Shopping</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="d-flex align-items-center justify-content-center">
-                        <i class="bi bi-arrow-left-right text-info fs-4 me-2"></i>
-                        <span class="fw-medium">Best Price Guarantee</span>
+                    <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="bi bi-arrow-left-right text-info fs-4 me-2" aria-hidden="true"></i>
+                            <span>Best Price Guarantee</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Main Content Sections -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5 fw-bold">Browse by Category</h2>
-            <div class="row g-4">
-                <!-- Categories will be loaded here -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="card border-0 shadow-sm h-100 text-center p-4">
-                        <div class="bg-primary bg-opacity-10 rounded-circle p-3 mx-auto mb-3" style="width: 80px; height: 80px;">
-                            <i class="bi bi-laptop fs-2 text-primary"></i>
-                        </div>
-                        <h5 class="fw-bold">Electronics</h5>
-                        <p class="text-muted small">Compare prices on laptops, phones, TVs</p>
-                    </div>
+        <!-- Trending Now Section -->
+        <section id="trending" class="py-5" aria-labelledby="trending-heading">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 id="trending-heading" class="h3 fw-bold">🔥 Trending Now</h2>
+                    <a href="products.html" class="text-decoration-none">
+                        View All <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                    </a>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="card border-0 shadow-sm h-100 text-center p-4">
-                        <div class="bg-success bg-opacity-10 rounded-circle p-3 mx-auto mb-3" style="width: 80px; height: 80px;">
-                            <i class="bi bi-house-door fs-2 text-success"></i>
-                        </div>
-                        <h5 class="fw-bold">Home & Kitchen</h5>
-                        <p class="text-muted small">Appliances, furniture, cookware</p>
-                    </div>
+                <div class="row g-4" id="trendingProducts" role="list" aria-label="Trending products">
+                    <!-- Trending products loaded via JavaScript -->
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="card border-0 shadow-sm h-100 text-center p-4">
-                        <div class="bg-warning bg-opacity-10 rounded-circle p-3 mx-auto mb-3" style="width: 80px; height: 80px;">
-                            <i class="bi bi-heart-pulse fs-2 text-warning"></i>
-                        </div>
-                        <h5 class="fw-bold">Health & Fitness</h5>
-                        <p class="text-muted small">Fitness trackers, supplements</p>
-                    </div>
+            </div>
+        </section>
+
+        <!-- Category Grid -->
+        <section class="py-5 bg-light" aria-labelledby="categories-heading">
+            <div class="container">
+                <h2 id="categories-heading" class="text-center mb-5 fw-bold">Browse by Category</h2>
+                <div class="row g-4" id="categoryGrid" role="list" aria-label="Product categories">
+                    <!-- Categories loaded via JavaScript -->
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="card border-0 shadow-sm h-100 text-center p-4">
-                        <div class="bg-danger bg-opacity-10 rounded-circle p-3 mx-auto mb-3" style="width: 80px; height: 80px;">
-                            <i class="bi bi-bag fs-2 text-danger"></i>
+            </div>
+        </section>
+
+        <!-- Deal of the Day -->
+        <section class="py-5" aria-labelledby="deal-heading">
+            <div class="container">
+                <div class="deal-card bg-gradient-warning rounded-3 p-4 p-lg-5 text-white">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <span class="badge bg-white text-dark mb-3" role="note">🔥 Deal of the Day</span>
+                            <h2 id="deal-heading" class="h2 fw-bold mb-3">Up to 50% Off Premium Headphones</h2>
+                            <p class="mb-4">Limited time offer on top-rated noise-cancelling headphones from Sony, Bose, and more.</p>
+                            <div class="countdown-timer mb-4" role="timer" aria-label="Deal countdown">
+                                <div class="d-flex gap-3">
+                                    <div class="text-center">
+                                        <div class="countdown-box bg-white text-dark rounded-2 p-2">
+                                            <span class="fs-3 fw-bold" id="hours">12</span>
+                                        </div>
+                                        <small>Hours</small>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="countdown-box bg-white text-dark rounded-2 p-2">
+                                            <span class="fs-3 fw-bold" id="minutes">45</span>
+                                        </div>
+                                        <small>Minutes</small>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="countdown-box bg-white text-dark rounded-2 p-2">
+                                            <span class="fs-3 fw-bold" id="seconds">30</span>
+                                        </div>
+                                        <small>Seconds</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="product-detail.html?id=1" class="btn btn-light btn-lg px-4">
+                                Shop Now <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i>
+                            </a>
                         </div>
-                        <h5 class="fw-bold">Fashion</h5>
-                        <p class="text-muted small">Clothing, shoes, accessories</p>
+                        <div class="col-lg-4 text-center">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&auto=format&fit=crop" 
+                                 alt="Premium headphones on sale" class="img-fluid rounded-3 shadow" loading="lazy">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Recently Reviewed -->
+        <section class="py-5" aria-labelledby="recently-reviewed-heading">
+            <div class="container">
+                <h2 id="recently-reviewed-heading" class="h3 fw-bold mb-4">Recently Reviewed</h2>
+                <div class="row g-4" id="recentlyReviewed" role="list" aria-label="Recently reviewed products">
+                    <!-- Recently reviewed products loaded via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Preview -->
+        <section class="py-5 bg-light" aria-labelledby="blog-heading">
+            <div class="container">
+                <h2 id="blog-heading" class="text-center mb-5 fw-bold">Latest Buying Guides</h2>
+                <div class="row g-4" id="blogPreview">
+                    <div class="col-md-4">
+                        <article class="card h-100 border-0 shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1515343480029-43cdfe6b6aae?w=400&auto=format&fit=crop" 
+                                 class="card-img-top" alt="How to choose the right laptop" loading="lazy">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Electronics</span>
+                                <h3 class="h5 card-title">
+                                    <a href="blog/how-to-choose-laptop.html" class="text-decoration-none text-dark">
+                                        How to Choose the Right Laptop in 2024
+                                    </a>
+                                </h3>
+                                <p class="card-text text-muted">Complete guide to selecting the perfect laptop for work, gaming, or school.</p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <small class="text-muted">8 min read</small>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="card h-100 border-0 shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&auto=format&fit=crop" 
+                                 class="card-img-top" alt="Best budget headphones" loading="lazy">
+                            <div class="card-body">
+                                <span class="badge bg-success mb-2">Audio</span>
+                                <h3 class="h5 card-title">
+                                    <a href="blog/best-budget-headphones.html" class="text-decoration-none text-dark">
+                                        Best Budget Headphones Under $100
+                                    </a>
+                                </h3>
+                                <p class="card-text text-muted">Top picks for quality audio without breaking the bank.</p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <small class="text-muted">6 min read</small>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="card h-100 border-0 shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w-400" 
+                                 class="card-img-top" alt="Kitchen appliances guide" loading="lazy">
+                            <div class="card-body">
+                                <span class="badge bg-warning mb-2">Home & Kitchen</span>
+                                <h3 class="h5 card-title">
+                                    <a href="blog/essential-kitchen-appliances.html" class="text-decoration-none text-dark">
+                                        Essential Kitchen Appliances Every Home Needs
+                                    </a>
+                                </h3>
+                                <p class="card-text text-muted">Must-have appliances for efficient and enjoyable cooking.</p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <small class="text-muted">10 min read</small>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="buying-guides.html" class="btn btn-primary btn-lg">
+                        View All Buying Guides <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <footer class="bg-dark text-white pt-5 pb-4" role="contentinfo">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="logo-icon me-2">
-                            <i class="bi bi-search"></i>
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <div class="logo-icon bg-primary rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;" aria-label="ValueFinder Hub Logo">
+                            <i class="bi bi-search text-white" aria-hidden="true"></i>
                         </div>
                         <div>
                             <span class="fw-bold fs-4 text-white">ValueFinder</span>
                             <span class="d-block fs-6 text-light" style="margin-top: -5px;">Hub</span>
                         </div>
-                    </div>
+                    </a>
                     <p class="text-light opacity-75">Unbiased product comparisons and deals from trusted retailers. We help you make informed purchasing decisions.</p>
+                    <div class="affiliate-disclosure mt-4 p-3 bg-dark border rounded">
+                        <small class="d-flex align-items-center">
+                            <i class="bi bi-info-circle me-2 text-primary" aria-hidden="true"></i>
+                            <span>As an Amazon Associate & affiliate of other retailers, we earn from qualifying purchases. <a href="affiliate-disclosure.html" class="text-white text-decoration-underline">Learn more</a></span>
+                        </small>
+                    </div>
                 </div>
                 
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h5 class="fw-bold mb-4">Categories</h5>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><a href="#" class="text-light text-decoration-none opacity-75">Electronics</a></li>
-                                <li class="mb-2"><a href="#" class="text-light text-decoration-none opacity-75">Home & Kitchen</a></li>
-                                <li class="mb-2"><a href="#" class="text-light text-decoration-none opacity-75">Health & Fitness</a></li>
-                                <li class="mb-2"><a href="#" class="text-light text-decoration-none opacity-75">Fashion</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <h5 class="fw-bold mb-4">Company</h5>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><a href="about.html" class="text-light text-decoration-none opacity-75">About Us</a></li>
-                                <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none opacity-75">Contact</a></li>
-                                <li class="mb-2"><a href="privacy-policy.html" class="text-light text-decoration-none opacity-75">Privacy Policy</a></li>
-                                <li class="mb-2"><a href="terms.html" class="text-light text-decoration-none opacity-75">Terms of Service</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <h5 class="fw-bold mb-4">Stay Updated</h5>
-                            <p class="text-light opacity-75 mb-3">Get the best deals and price alerts.</p>
-                            <div class="input-group mb-3">
-                                <input type="email" class="form-control" placeholder="Your email">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="bi bi-envelope"></i>
-                                </button>
-                            </div>
-                        </div>
+                <div class="col-lg-2 col-md-4">
+                    <h3 class="h5 fw-bold mb-4">Categories</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="category.html?cat=electronics" class="text-light text-decoration-none opacity-75">Electronics</a></li>
+                        <li class="mb-2"><a href="category.html?cat=home-kitchen" class="text-light text-decoration-none opacity-75">Home & Kitchen</a></li>
+                        <li class="mb-2"><a href="category.html?cat=health-fitness" class="text-light text-decoration-none opacity-75">Health & Fitness</a></li>
+                        <li class="mb-2"><a href="category.html?cat=fashion" class="text-light text-decoration-none opacity-75">Fashion</a></li>
+                        <li class="mb-2"><a href="category.html?cat=beauty" class="text-light text-decoration-none opacity-75">Beauty</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h3 class="h5 fw-bold mb-4">Company</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-light text-decoration-none opacity-75">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none opacity-75">Contact</a></li>
+                        <li class="mb-2"><a href="how-it-works.html" class="text-light text-decoration-none opacity-75">How It Works</a></li>
+                        <li class="mb-2"><a href="privacy-policy.html" class="text-light text-decoration-none opacity-75">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="terms.html" class="text-light text-decoration-none opacity-75">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4">
+                    <h3 class="h5 fw-bold mb-4">Stay Updated</h3>
+                    <p class="text-light opacity-75 mb-3">Get the best deals and price alerts directly to your inbox.</p>
+                    <form id="newsletterForm" class="input-group mb-3">
+                        <label for="newsletterEmail" class="visually-hidden">Email address</label>
+                        <input type="email" id="newsletterEmail" class="form-control" placeholder="Your email address" required>
+                        <button class="btn btn-primary" type="submit">
+                            <i class="bi bi-envelope" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-light opacity-75" aria-label="Facebook"><i class="bi bi-facebook fs-5" aria-hidden="true"></i></a>
+                        <a href="#" class="text-light opacity-75" aria-label="Twitter"><i class="bi bi-twitter fs-5" aria-hidden="true"></i></a>
+                        <a href="#" class="text-light opacity-75" aria-label="Instagram"><i class="bi bi-instagram fs-5" aria-hidden="true"></i></a>
+                        <a href="#" class="text-light opacity-75" aria-label="Pinterest"><i class="bi bi-pinterest fs-5" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -378,16 +497,16 @@
             
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="mb-0 opacity-75">© 2024 ValueFinder Hub. All rights reserved.</p>
+                    <p class="mb-0 opacity-75">© <span id="currentYear">2024</span> ValueFinder Hub. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <div class="d-flex align-items-center justify-content-md-end gap-3">
                         <span class="opacity-75">Partner Retailers:</span>
-                        <div class="d-flex gap-2">
-                            <i class="bi bi-amazon text-warning fs-5"></i>
-                            <i class="bi bi-shop text-primary fs-5"></i>
-                            <i class="bi bi-basket text-danger fs-5"></i>
-                            <i class="bi bi-bag text-success fs-5"></i>
+                        <div class="retailer-logos d-flex gap-2">
+                            <i class="bi bi-amazon text-warning fs-5" aria-label="Amazon" title="Amazon"></i>
+                            <i class="bi bi-shop text-primary fs-5" aria-label="Walmart" title="Walmart"></i>
+                            <i class="bi bi-basket text-danger fs-5" aria-label="Target" title="Target"></i>
+                            <i class="bi bi-bag text-success fs-5" aria-label="Best Buy" title="Best Buy"></i>
                         </div>
                     </div>
                 </div>
@@ -395,14 +514,75 @@
         </div>
     </footer>
 
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title h5">Account</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" id="accountTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab">Login</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab">Register</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content p-3">
+                        <div class="tab-pane fade show active" id="login" role="tabpanel">
+                            <form id="loginForm">
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="register" role="tabpanel">
+                            <form id="registerForm">
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Create Account</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/seo.js"></script>
+    
     <script>
-        // Simple initialization
+        // Initialize homepage
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('ValueFinder Hub loaded successfully!');
+            loadTrendingProducts();
+            loadCategories();
+            loadRecentlyReviewed();
+            initValuePropsRotation();
+            startDealCountdown();
+            
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
         });
     </script>
 </body>
 </html>
-
