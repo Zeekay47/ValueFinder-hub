@@ -121,10 +121,6 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
 }
 
-.search-btn:hover {
-    background-color: var(--primary-dark) !important;
-    transform: translateY(-50%) scale(1.05);
-}
 
 /* Remove the old search button styles */
 .btn.rounded-circle {
@@ -489,4 +485,5 @@ footer .form-control:focus {
         background-position: -200% 0;
     }
 }
+
 
