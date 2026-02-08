@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/Blog">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buying Guides & Product Reviews - ValueFinder Hub</title>
+    <meta name="description" content="Expert buying guides, product reviews, and comparison articles. Learn how to choose the best products and find the best deals.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://valuefinderhub.com/blog.html">
+    <meta property="og:title" content="Buying Guides & Product Reviews - Expert Advice">
+    <meta property="og:description" content="Read expert buying guides, product reviews, and comparison articles to make informed purchasing decisions.">
+    <meta property="og:image" content="https://valuefinderhub.com/images/og-images/blog-og.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://valuefinderhub.com/blog.html">
+    <meta property="twitter:title" content="Buying Guides & Product Reviews">
+    <meta property="twitter:description" content="Expert buying guides and product reviews to help you make better purchasing decisions.">
+    <meta property="twitter:image" content="https://valuefinderhub.com/images/og-images/blog-og.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://valuefinderhub.com/blog.html">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "ValueFinder Hub Buying Guides",
+        "description": "Expert buying guides and product reviews to help consumers make informed purchasing decisions",
+        "url": "https://valuefinderhub.com/blog.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ValueFinder Hub",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://valuefinderhub.com/images/logos/logo.png"
+            }
+        }
+    }
+    </script>
+    
+    <!-- Common CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap-custom.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (Same as index.html) -->
+    <header class="sticky-top bg-white shadow-sm">
+        <!-- Copy header from index.html -->
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="blog-hero bg-gradient-primary text-white py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb bg-transparent text-white p-0 mb-3">
+                                <li class="breadcrumb-item"><a href="index.html" class="text-white opacity-75">Home</a></li>
+                                <li class="breadcrumb-item active text-white">Buying Guides</li>
+                            </ol>
+                        </nav>
+                        <h1 class="display-5 fw-bold mb-3">Buying Guides & Expert Reviews</h1>
+                        <p class="lead mb-4 opacity-90">Make informed decisions with our expert buying guides, product reviews, and comparison articles.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="#latest-guides" class="btn btn-light">Latest Guides</a>
+                            <a href="#popular-topics" class="btn btn-outline-light">Popular Topics</a>
+                            <a href="#categories" class="btn btn-outline-light">Browse Categories</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-4 mt-lg-0 text-center">
+                        <div class="icon-wrapper bg-white bg-opacity-25 rounded-circle p-4 d-inline-flex">
+                            <i class="bi bi-journal-text text-white fs-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Guides -->
+        <section id="latest-guides" class="py-5">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-5">
+                    <h2 class="h3 fw-bold">Latest Buying Guides</h2>
+                    <a href="#all-guides" class="text-decoration-none">
+                        View All <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="row g-4" id="latestGuides">
+                    <!-- Latest guides loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Topics -->
+        <section id="popular-topics" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold">Popular Topics</h2>
+                <div class="row g-4" id="popularTopics">
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="topic-icon mb-3">
+                                    <i class="bi bi-laptop fs-1 text-primary"></i>
+                                </div>
+                                <h3 class="h5 mb-3">Tech & Electronics</h3>
+                                <p class="text-muted mb-4">Laptops, smartphones, headphones, and other electronics buying guides.</p>
+                                <a href="category.html?cat=electronics" class="btn btn-outline-primary">Explore Guides</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="topic-icon mb-3">
+                                    <i class="bi bi-house-door fs-1 text-success"></i>
+                                </div>
+                                <h3 class="h5 mb-3">Home & Kitchen</h3>
+                                <p class="text-muted mb-4">Appliances, furniture, cookware, and home improvement guides.</p>
+                                <a href="category.html?cat=home-kitchen" class="btn btn-outline-success">Explore Guides</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="topic-icon mb-3">
+                                    <i class="bi bi-heart-pulse fs-1 text-danger"></i>
+                                </div>
+                                <h3 class="h5 mb-3">Health & Fitness</h3>
+                                <p class="text-muted mb-4">Fitness equipment, supplements, and wellness product guides.</p>
+                                <a href="category.html?cat=health-fitness" class="btn btn-outline-danger">Explore Guides</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Guides Grid -->
+        <section id="all-guides" class="py-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-8">
+                        <h2 class="h3 fw-bold mb-0">All Buying Guides</h2>
+                        <p class="text-muted mb-0">Browse our complete collection of buying guides and product reviews.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search guides..." id="guideSearch">
+                            <button class="btn btn-outline-primary" type="button">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row g-4" id="allGuidesGrid">
+                    <!-- All guides loaded dynamically -->
+                </div>
+                
+                <!-- Loading State -->
+                <div id="loadingGuides" class="text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-3 text-muted">Loading buying guides...</p>
+                </div>
+                
+                <!-- No Results -->
+                <div id="noGuidesFound" class="text-center py-5 d-none">
+                    <i class="bi bi-search fs-1 text-muted mb-3"></i>
+                    <h4>No guides found</h4>
+                    <p class="text-muted">Try a different search term or browse by category.</p>
+                </div>
+                
+                <!-- Pagination -->
+                <nav aria-label="Guide pagination" class="mt-5">
+                    <ul class="pagination justify-content-center" id="guidePagination">
+                        <!-- Pagination loaded dynamically -->
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="py-5 bg-primary text-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <i class="bi bi-envelope fs-1 mb-3 d-block"></i>
+                        <h2 class="h3 fw-bold mb-3">Stay Updated</h2>
+                        <p class="mb-4 opacity-90">Get weekly buying guides, product reviews, and deal alerts delivered to your inbox.</p>
+                        <form class="row g-2 justify-content-center">
+                            <div class="col-md-6">
+                                <input type="email" class="form-control form-control-lg" placeholder="Your email address">
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-light btn-lg w-100">Subscribe</button>
+                            </div>
+                        </form>
+                        <p class="small mt-3 opacity-75">No spam, unsubscribe anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <!-- Copy footer from index.html -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        let allGuides = [];
+        let filteredGuides = [];
+        let currentPage = 1;
+        const guidesPerPage = 9;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAllGuides();
+            initGuideSearch();
+        });
+        
+        function loadAllGuides() {
+            fetch('data/guides.json')
+                .then(response => response.json())
+                .then(guides => {
+                    allGuides = guides;
+                    filteredGuides = [...guides];
+                    
+                    // Load latest guides
+                    loadLatestGuides();
+                    
+                    // Load all guides grid
+                    renderGuidesGrid();
+                    
+                    // Hide loading state
+                    document.getElementById('loadingGuides').classList.add('d-none');
+                })
+                .catch(error => {
+                    console.error('Error loading guides:', error);
+                    document.getElementById('loadingGuides').innerHTML = `
+                        <div class="alert alert-danger">
+                            <i class="bi bi-exclamation-triangle me-2"></i>
+                            Error loading guides. Please try again later.
+                        </div>
+                    `;
+                });
+        }
+        
+        function loadLatestGuides() {
+            const container = document.getElementById('latestGuides');
+            const latest = allGuides.slice(0, 3);
+            
+            container.innerHTML = latest.map(guide => `
+                <div class="col-md-4">
+                    <article class="card guide-card h-100 border-0 shadow-sm">
+                        <img src="${guide.image}" class="card-img-top" alt="${guide.title}" loading="lazy">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="badge bg-primary">${guide.category}</span>
+                                <small class="text-muted">${guide.readTime}</small>
+                            </div>
+                            <h3 class="h5 card-title">
+                                <a href="guide-detail.html?id=${guide.id}" class="text-decoration-none text-dark">
+                                    ${guide.title}
+                                </a>
+                            </h3>
+                            <p class="card-text text-muted">${guide.excerpt}</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <div class="author-info d-flex align-items-center">
+                                    <img src="${guide.author.avatar}" class="rounded-circle me-2" width="30" height="30" alt="${guide.author.name}">
+                                    <small>${guide.author.name}</small>
+                                </div>
+                                <small class="text-muted">${guide.date}</small>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            `).join('');
+        }
+        
+        function initGuideSearch() {
+            const searchInput = document.getElementById('guideSearch');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                if (searchTerm.length === 0) {
+                    filteredGuides = [...allGuides];
+                } else {
+                    filteredGuides = allGuides.filter(guide => {
+                        return guide.title.toLowerCase().includes(searchTerm) ||
+                               guide.excerpt.toLowerCase().includes(searchTerm) ||
+                               guide.category.toLowerCase().includes(searchTerm);
+                    });
+                }
+                
+                currentPage = 1;
+                renderGuidesGrid();
+            });
+        }
+        
+        function renderGuidesGrid() {
+            const container = document.getElementById('allGuidesGrid');
+            const noResults = document.getElementById('noGuidesFound');
+            
+            if (filteredGuides.length === 0) {
+                container.innerHTML = '';
+                noResults.classList.remove('d-none');
+                renderPagination(0);
+                return;
+            }
+            
+            noResults.classList.add('d-none');
+            
+            // Calculate pagination
+            const totalPages = Math.ceil(filteredGuides.length / guidesPerPage);
+            const startIndex = (currentPage - 1) * guidesPerPage;
+            const endIndex = startIndex + guidesPerPage;
+            const pageGuides = filteredGuides.slice(startIndex, endIndex);
+            
+            // Render guides
+            container.innerHTML = pageGuides.map(guide => `
+                <div class="col-md-4">
+                    <article class="card guide-card h-100 border-0 shadow-sm">
+                        <img src="${guide.image}" class="card-img-top" alt="${guide.title}" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="badge bg-primary">${guide.category}</span>
+                                <small class="text-muted">${guide.readTime}</small>
+                            </div>
+                            <h3 class="h5 card-title flex-grow-1">
+                                <a href="guide-detail.html?id=${guide.id}" class="text-decoration-none text-dark">
+                                    ${guide.title}
+                                </a>
+                            </h3>
+                            <p class="card-text text-muted">${guide.excerpt}</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <div class="author-info d-flex align-items-center">
+                                    <img src="${guide.author.avatar}" class="rounded-circle me-2" width="30" height="30" alt="${guide.author.name}">
+                                    <small>${guide.author.name}</small>
+                                </div>
+                                <small class="text-muted">${guide.date}</small>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            `).join('');
+            
+            // Render pagination
+            renderPagination(totalPages);
+        }
+        
+        function renderPagination(totalPages) {
+            const pagination = document.getElementById('guidePagination');
+            
+            if (totalPages <= 1) {
+                pagination.innerHTML = '';
+                return;
+            }
+            
+            let html = '';
+            
+            // Previous button
+            html += `
+                <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+                    <a class="page-link" href="#" onclick="changeGuidePage(${currentPage - 1})" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            `;
+            
+            // Page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === 1 || i === totalPages || (i >= currentPage - 1 && i <= currentPage + 1)) {
+                    html += `
+                        <li class="page-item ${i === currentPage ? 'active' : ''}">
+                            <a class="page-link" href="#" onclick="changeGuidePage(${i})">${i}</a>
+                        </li>
+                    `;
+                } else if (i === currentPage - 2 || i === currentPage + 2) {
+                    html += '<li class="page-item disabled"><span class="page-link">...</span></li>';
+                }
+            }
+            
+            // Next button
+            html += `
+                <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+                    <a class="page-link" href="#" onclick="changeGuidePage(${currentPage + 1})" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            `;
+            
+            pagination.innerHTML = html;
+        }
+        
+        function changeGuidePage(page) {
+            currentPage = page;
+            renderGuidesGrid();
+            window.scrollTo({ top: document.getElementById('all-guides').offsetTop - 100, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
