@@ -1,0 +1,316 @@
+/* Bootstrap Custom Overrides for ValueFinder Hub */
+
+/* Color System Overrides */
+:root {
+    --bs-blue: #2563EB;
+    --bs-indigo: #4F46E5;
+    --bs-purple: #7C3AED;
+    --bs-pink: #DB2777;
+    --bs-red: #DC2626;
+    --bs-orange: #EA580C;
+    --bs-yellow: #F59E0B;
+    --bs-green: #10B981;
+    --bs-teal: #14B8A6;
+    --bs-cyan: #06B6D4;
+    --bs-white: #FFFFFF;
+    --bs-gray: #6B7280;
+    --bs-gray-dark: #1F2937;
+    --bs-primary: #2563EB;
+    --bs-secondary: #6B7280;
+    --bs-success: #10B981;
+    --bs-info: #06B6D4;
+    --bs-warning: #F59E0B;
+    --bs-danger: #DC2626;
+    --bs-light: #F9FAFB;
+    --bs-dark: #1F2937;
+}
+
+/* Button Customizations */
+.btn-primary {
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: #1D4ED8;
+    --bs-btn-hover-border-color: #1D4ED8;
+    --bs-btn-active-bg: #1D4ED8;
+    --bs-btn-active-border-color: #1D4ED8;
+    --bs-btn-disabled-bg: var(--bs-primary);
+    --bs-btn-disabled-border-color: var(--bs-primary);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: var(--bs-primary);
+    --bs-btn-hover-border-color: var(--bs-primary);
+    --bs-btn-active-bg: var(--bs-primary);
+    --bs-btn-active-border-color: var(--bs-primary);
+    --bs-btn-disabled-color: var(--bs-primary);
+    --bs-btn-disabled-border-color: var(--bs-primary);
+}
+
+/* Card Customizations */
+.card {
+    --bs-card-spacer-y: 1.25rem;
+    --bs-card-spacer-x: 1.25rem;
+    --bs-card-title-spacer-y: 0.75rem;
+    --bs-card-border-width: 1px;
+    --bs-card-border-color: var(--bs-border-color);
+    --bs-card-border-radius: 0.75rem;
+    --bs-card-box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    --bs-card-inner-border-radius: calc(0.75rem - 1px);
+    box-shadow: var(--bs-card-box-shadow);
+}
+
+.card:hover {
+    --bs-card-box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Form Control Customizations */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
+}
+
+.form-range::-webkit-slider-thumb {
+    background-color: var(--bs-primary);
+}
+
+.form-range::-moz-range-thumb {
+    background-color: var(--bs-primary);
+}
+
+.form-check-input:checked {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+/* Alert Customizations */
+.alert-primary {
+    --bs-alert-color: #1E40AF;
+    --bs-alert-bg: #DBEAFE;
+    --bs-alert-border-color: #93C5FD;
+}
+
+.alert-success {
+    --bs-alert-color: #065F46;
+    --bs-alert-bg: #D1FAE5;
+    --bs-alert-border-color: #A7F3D0;
+}
+
+.alert-warning {
+    --bs-alert-color: #92400E;
+    --bs-alert-bg: #FEF3C7;
+    --bs-alert-border-color: #FDE68A;
+}
+
+.alert-danger {
+    --bs-alert-color: #991B1B;
+    --bs-alert-bg: #FEE2E2;
+    --bs-alert-border-color: #FCA5A5;
+}
+
+/* Badge Customizations */
+.badge {
+    --bs-badge-padding-x: 0.65em;
+    --bs-badge-padding-y: 0.35em;
+    --bs-badge-font-size: 0.75em;
+    --bs-badge-font-weight: 500;
+    --bs-badge-border-radius: 0.375rem;
+}
+
+.bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+}
+
+/* Progress Bar Customizations */
+.progress {
+    --bs-progress-height: 0.5rem;
+    --bs-progress-border-radius: 0.25rem;
+}
+
+.progress-bar {
+    background-color: var(--bs-primary);
+}
+
+/* Breadcrumb Customizations */
+.breadcrumb {
+    --bs-breadcrumb-divider-color: currentColor;
+    --bs-breadcrumb-item-active-color: var(--bs-primary);
+}
+
+.breadcrumb-item a {
+    color: var(--bs-gray);
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--bs-primary);
+}
+
+/* Pagination Customizations */
+.page-link {
+    color: var(--bs-gray);
+    border-color: var(--bs-border-color);
+}
+
+.page-link:hover {
+    color: var(--bs-primary);
+    background-color: var(--bs-light);
+    border-color: var(--bs-border-color);
+}
+
+.page-item.active .page-link {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+/* Accordion Customizations */
+.accordion-button:not(.collapsed) {
+    color: var(--bs-primary);
+    background-color: rgba(var(--bs-primary-rgb), 0.05);
+}
+
+.accordion-button:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
+}
+
+/* Dropdown Customizations */
+.dropdown-item:active {
+    background-color: var(--bs-primary);
+}
+
+/* Modal Customizations */
+.modal-header {
+    border-bottom-color: var(--bs-border-color);
+}
+
+.modal-footer {
+    border-top-color: var(--bs-border-color);
+}
+
+/* Tooltip Customizations */
+.tooltip {
+    --bs-tooltip-bg: var(--bs-dark);
+    --bs-tooltip-color: var(--bs-white);
+}
+
+/* Popover Customizations */
+.popover {
+    --bs-popover-border-color: var(--bs-border-color);
+    --bs-popover-header-bg: var(--bs-light);
+    --bs-popover-header-color: var(--bs-dark);
+}
+
+/* Toast Customizations */
+.toast {
+    --bs-toast-border-width: 1px;
+    --bs-toast-border-color: var(--bs-border-color);
+    --bs-toast-box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Offcanvas Customizations */
+.offcanvas {
+    --bs-offcanvas-border-width: 1px;
+    --bs-offcanvas-border-color: var(--bs-border-color);
+}
+
+/* Table Customizations */
+.table {
+    --bs-table-striped-bg: rgba(var(--bs-primary-rgb), 0.05);
+    --bs-table-hover-bg: rgba(var(--bs-primary-rgb), 0.075);
+}
+
+/* Nav & Tabs Customizations */
+.nav-link {
+    color: var(--bs-gray);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--bs-primary);
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--bs-primary);
+}
+
+.nav-tabs {
+    --bs-nav-tabs-border-width: 2px;
+    --bs-nav-tabs-border-color: var(--bs-border-color);
+    --bs-nav-tabs-border-radius: 0.5rem;
+    --bs-nav-tabs-link-hover-border-color: var(--bs-border-color);
+    --bs-nav-tabs-link-active-color: var(--bs-primary);
+    --bs-nav-tabs-link-active-bg: transparent;
+    --bs-nav-tabs-link-active-border-color: var(--bs-primary);
+}
+
+/* Spinner Customizations */
+.spinner-border {
+    --bs-spinner-width: 2rem;
+    --bs-spinner-height: 2rem;
+    --bs-spinner-border-width: 0.25em;
+}
+
+/* Close Button Customizations */
+.btn-close:focus {
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bs-primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1D4ED8;
+}
+
+/* Selection Color */
+::selection {
+    background-color: rgba(37, 99, 235, 0.2);
+    color: var(--bs-dark);
+}
+
+/* Placeholder Color */
+::placeholder {
+    color: #9CA3AF !important;
+    opacity: 1;
+}
+
+/* Focus Styles for Accessibility */
+:focus {
+    outline: 2px solid var(--bs-primary);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #dee2e6 !important;
+    }
+    
+    .btn {
+        border: 1px solid #dee2e6 !important;
+        color: #000 !important;
+        background-color: transparent !important;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+}
