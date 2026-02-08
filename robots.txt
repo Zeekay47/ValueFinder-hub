@@ -1,0 +1,45 @@
+# Robots.txt for ValueFinder Hub
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+# Sitemap location
+Sitemap: https://valuefinderhub.com/sitemap.xml
+
+# Crawl delay (requests per second)
+Crawl-delay: 2
+
+# Directives for specific search engines
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Googlebot-Image
+Allow: /images/
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Slurp
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /admin/
+
+User-agent: Baiduspider
+Allow: /
+Disallow: /admin/
+
+User-agent: YandexBot
+Allow: /
+Disallow: /admin/
