@@ -1,0 +1,62 @@
+[
+  {
+    "id": "amazon",
+    "name": "Amazon",
+    "description": "World's largest online retailer with millions of products, competitive pricing, and fast shipping options.",
+    "logo": "bi-amazon",
+    "color": "warning",
+    "trustScore": 9.5,
+    "shippingOptions": ["Free Shipping with Prime", "Standard Shipping", "Two-Day Shipping", "Same-Day Delivery"],
+    "returnPolicy": "30-day return policy for most items",
+    "customerService": "24/7 customer support via chat, phone, and email",
+    "commissionRates": "1-10% depending on product category"
+  },
+  {
+    "id": "walmart",
+    "name": "Walmart",
+    "description": "Major retail chain with extensive online store offering competitive prices on a wide range of products.",
+    "logo": "bi-shop",
+    "color": "primary",
+    "trustScore": 9.0,
+    "shippingOptions": ["Free Shipping on $35+", "Two-Day Shipping", "Store Pickup", "Same-Day Delivery"],
+    "returnPolicy": "90-day return policy for most items",
+    "customerService": "Customer support via phone and email",
+    "commissionRates": "1-4% depending on product category"
+  },
+  {
+    "id": "target",
+    "name": "Target",
+    "description": "Popular retail store with strong online presence offering stylish products at affordable prices.",
+    "logo": "bi-basket",
+    "color": "danger",
+    "trustScore": 8.8,
+    "shippingOptions": ["Free Shipping on $35+", "Two-Day Shipping", "Same-Day Delivery", "Drive Up"],
+    "returnPolicy": "90-day return policy for most items",
+    "customerService": "Customer support via phone, chat, and email",
+    "commissionRates": "1-8% depending on product category"
+  },
+  {
+    "id": "bestbuy",
+    "name": "Best Buy",
+    "description": "Leading electronics retailer with expert advice, price matching, and extensive tech product selection.",
+    "logo": "bi-gear",
+    "color": "info",
+    "trustScore": 9.2,
+    "shippingOptions": ["Free Standard Shipping", "Expedited Shipping", "Store Pickup", "Same-Day Delivery"],
+    "returnPolicy": "15-day return policy for most electronics",
+    "customerService": "In-store experts and online support",
+    "commissionRates": "1-6% depending on product category"
+  },
+  {
+    "id": "ebay",
+    "name": "eBay",
+    "description": "Online marketplace connecting buyers and sellers worldwide for new and used products.",
+    "logo": "bi-cart",
+    "color": "secondary",
+    "trustScore": 8.5,
+    "shippingOptions": ["Varies by seller", "Expedited Shipping", "International Shipping"],
+    "returnPolicy": "Varies by seller, typically 30 days",
+    "customerService": "Buyer protection program",
+    "commissionRates": "Varies by category and seller"
+  }
+]
