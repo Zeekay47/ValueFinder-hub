@@ -88,12 +88,12 @@ h1, h2, h3, h4, h5, h6 {
 /* Search Bar */
 .search-wrapper {
     position: relative;
+    width: 100%;
 }
 
 .search-input {
     width: 100%;
-    padding: 0.75rem 1.5rem;
-    padding-right: 50px;
+    padding: 0.75rem 3rem 0.75rem 1.5rem; /* Extra right padding for icon */
     border: 2px solid var(--border-color);
     border-radius: 50px;
     font-size: 0.95rem;
@@ -108,16 +108,27 @@ h1, h2, h3, h4, h5, h6 {
 
 .search-btn {
     position: absolute;
-    right: 5px;
     top: 50%;
+    right: 6px;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
+}
+
+.search-btn:hover {
+    background-color: var(--primary-dark) !important;
+    transform: translateY(-50%) scale(1.05);
+}
+
+/* Remove the old search button styles */
+.btn.rounded-circle {
+    border-radius: 50% !important;
 }
 
 /* Hero Section */
@@ -478,3 +489,4 @@ footer .form-control:focus {
         background-position: -200% 0;
     }
 }
+
