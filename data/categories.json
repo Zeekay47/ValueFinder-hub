@@ -1,0 +1,68 @@
+[
+  {
+    "id": "electronics",
+    "name": "Electronics & Gadgets",
+    "description": "Compare prices on laptops, smartphones, tablets, headphones, TVs, cameras, and other electronics from top retailers.",
+    "icon": "laptop",
+    "color": "primary",
+    "content": "<p>Find the best deals on the latest electronics and gadgets. We compare prices from Amazon, Best Buy, Walmart, Target, and more to help you save money on your tech purchases.</p><h3>Popular Subcategories</h3><ul><li>Laptops & Computers</li><li>Smartphones & Tablets</li><li>Audio & Headphones</li><li>TVs & Home Theater</li><li>Cameras & Photography</li><li>Gaming Consoles</li><li>Wearable Technology</li><li>Smart Home Devices</li></ul>",
+    "seoTitle": "Electronics Price Comparison - Find Best Deals on Tech Gadgets",
+    "seoDescription": "Compare electronics prices from multiple retailers. Find the best deals on laptops, smartphones, TVs, headphones, and other gadgets.",
+    "count": 1250
+  },
+  {
+    "id": "home-kitchen",
+    "name": "Home & Kitchen",
+    "description": "Discover the best deals on appliances, cookware, furniture, bedding, home decor, and kitchen essentials.",
+    "icon": "house-door",
+    "color": "success",
+    "content": "<p>Transform your living space with the best home and kitchen products. We compare prices on everything from major appliances to small kitchen gadgets.</p><h3>Popular Subcategories</h3><ul><li>Kitchen Appliances</li><li>Cookware & Bakeware</li><li>Home Furniture</li><li>Bedding & Bath</li><li>Home Decor</li><li>Storage & Organization</li><li>Cleaning Supplies</li><li>Outdoor & Garden</li></ul>",
+    "seoTitle": "Home & Kitchen Products - Compare Prices & Find Deals",
+    "seoDescription": "Compare home and kitchen product prices. Find the best deals on appliances, furniture, cookware, and home essentials.",
+    "count": 980
+  },
+  {
+    "id": "health-fitness",
+    "name": "Health & Fitness",
+    "description": "Compare prices on fitness equipment, supplements, wellness products, exercise gear, and health monitors.",
+    "icon": "heart-pulse",
+    "color": "danger",
+    "content": "<p>Invest in your health and fitness with the best equipment and supplements. We compare prices to help you build your perfect home gym or wellness routine.</p><h3>Popular Subcategories</h3><ul><li>Fitness Equipment</li><li>Exercise Machines</li><li>Yoga & Pilates</li><li>Sports Nutrition</li><li>Health Monitors</li><li>Massage & Recovery</li><li>Wellness Products</li><li>Sports Apparel</li></ul>",
+    "seoTitle": "Health & Fitness Equipment - Price Comparison & Reviews",
+    "seoDescription": "Compare health and fitness product prices. Find deals on exercise equipment, supplements, fitness trackers, and wellness products.",
+    "count": 720
+  },
+  {
+    "id": "fashion",
+    "name": "Fashion & Accessories",
+    "description": "Find the best prices on clothing, shoes, jewelry, watches, handbags, and fashion accessories for men, women, and kids.",
+    "icon": "bag",
+    "color": "info",
+    "content": "<p>Stay stylish without overspending. We compare fashion prices across multiple retailers to help you find the best deals on clothing, shoes, and accessories.</p><h3>Popular Subcategories</h3><ul><li>Men's Clothing</li><li>Women's Clothing</li><li>Kids' Fashion</li><li>Shoes & Footwear</li><li>Jewelry & Watches</li><li>Handbags & Wallets</li><li>Accessories</li><li>Sportswear</li></ul>",
+    "seoTitle": "Fashion Price Comparison - Clothing, Shoes & Accessories",
+    "seoDescription": "Compare fashion prices across retailers. Find the best deals on clothing, shoes, jewelry, watches, and accessories.",
+    "count": 1560
+  },
+  {
+    "id": "beauty",
+    "name": "Beauty & Personal Care",
+    "description": "Compare prices on skincare, makeup, haircare, fragrance, grooming products, and beauty tools.",
+    "icon": "droplet",
+    "color": "warning",
+    "content": "<p>Look and feel your best with our beauty price comparisons. We help you find the best deals on skincare, makeup, haircare, and personal care products.</p><h3>Popular Subcategories</h3><ul><li>Skincare</li><li>Makeup & Cosmetics</li><li>Haircare</li><li>Fragrances</li><li>Men's Grooming</li><li>Beauty Tools</li><li>Bath & Body</li><li>Oral Care</li></ul>",
+    "seoTitle": "Beauty Products Price Comparison - Skincare, Makeup & More",
+    "seoDescription": "Compare beauty product prices. Find the best deals on skincare, makeup, haircare, fragrance, and personal care items.",
+    "count": 890
+  },
+  {
+    "id": "automotive",
+    "name": "Automotive",
+    "description": "Find deals on car parts, accessories, tools, car care products, electronics, and automotive supplies.",
+    "icon": "car-front",
+    "color": "secondary",
+    "content": "<p>Maintain and upgrade your vehicle with the best automotive products. We compare prices on everything from car parts to accessories and maintenance supplies.</p><h3>Popular Subcategories</h3><ul><li>Car Parts</li><li>Accessories</li><li>Tools & Equipment</li><li>Car Care</li><li>Electronics</li><li>Interior Accessories</li><li>Exterior Accessories</li><li>Safety & Security</li></ul>",
+    "seoTitle": "Automotive Products - Compare Car Parts & Accessories Prices",
+    "seoDescription": "Compare automotive product prices. Find the best deals on car parts, accessories, tools, electronics, and car care products.",
+    "count": 540
+  }
+]
