@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/ItemList">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Compare Prices Across All Categories | ValueFinder Hub</title>
+    <meta name="description" content="Browse and compare 10,000+ products across all categories. Find the best prices from Amazon, Walmart, Target, Best Buy and more.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://valuefinderhub.com/products.html">
+    <meta property="og:title" content="All Products - Compare Prices & Find Deals | ValueFinder Hub">
+    <meta property="og:description" content="Browse thousands of products across all categories. Compare prices from multiple retailers and find the best deals.">
+    <meta property="og:image" content="https://valuefinderhub.com/images/og-images/products-og.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://valuefinderhub.com/products.html">
+    <meta property="twitter:title" content="All Products - Compare Prices & Find Deals">
+    <meta property="twitter:description" content="Browse thousands of products across all categories. Compare prices from multiple retailers.">
+    <meta property="twitter:image" content="https://valuefinderhub.com/images/og-images/products-og.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://valuefinderhub.com/products.html">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "All Products - Price Comparisons",
+        "description": "Browse and compare thousands of products across all categories",
+        "url": "https://valuefinderhub.com/products.html",
+        "numberOfItems": 10000,
+        "itemListOrder": "https://schema.org/ItemListOrderAscending"
+    }
+    </script>
+    
+    <!-- Common CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap-custom.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (Same as index.html) -->
+    <header class="sticky-top bg-white shadow-sm">
+        <!-- Copy header from index.html -->
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="products-hero bg-gradient-primary text-white py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb bg-transparent text-white p-0 mb-3">
+                                <li class="breadcrumb-item"><a href="index.html" class="text-white opacity-75">Home</a></li>
+                                <li class="breadcrumb-item active text-white">All Products</li>
+                            </ol>
+                        </nav>
+                        <h1 class="display-5 fw-bold mb-3">Browse All Products</h1>
+                        <p class="lead mb-4 opacity-90">Compare prices across 10,000+ products from multiple retailers</p>
+                        <div class="search-box-large">
+                            <form action="search.html" method="get" class="position-relative">
+                                <div class="input-group input-group-lg">
+                                    <input type="search" class="form-control border-0" 
+                                           placeholder="What are you looking for?" 
+                                           aria-label="Search all products" name="q">
+                                    <button class="btn btn-light" type="submit">
+                                        <i class="bi bi-search"></i> Search
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-4 mt-lg-0 text-center">
+                        <div class="stats-card bg-white text-dark rounded-3 p-4 shadow">
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <div class="fs-2 fw-bold text-primary">10K+</div>
+                                    <small class="text-muted">Products</small>
+                                </div>
+                                <div class="col-4">
+                                    <div class="fs-2 fw-bold text-success">50+</div>
+                                    <small class="text-muted">Retailers</small>
+                                </div>
+                                <div class="col-4">
+                                    <div class="fs-2 fw-bold text-warning">24/7</div>
+                                    <small class="text-muted">Price Updates</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Category Navigation -->
+        <section class="py-4 bg-light">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 class="h5 fw-bold mb-0">Browse by Category</h2>
+                    <a href="index.html#categoryGrid" class="small text-decoration-none">
+                        View All <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="row g-2" id="quickCategories">
+                    <!-- Categories loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Sidebar Filters -->
+                    <div class="col-lg-3 mb-4">
+                        <div class="card border-0 shadow-sm sticky-top" style="top: 100px;">
+                            <div class="card-body">
+                                <h3 class="h5 mb-4">Filter Products</h3>
+                                
+                                <!-- Category Filter -->
+                                <div class="filter-section mb-4">
+                                    <h4 class="h6 fw-bold mb-3">Category</h4>
+                                    <div class="category-filters" id="categoryFilters">
+                                        <!-- Categories loaded dynamically -->
+                                    </div>
+                                </div>
+                                
+                                <!-- Price Filter -->
+                                <div class="filter-section mb-4">
+                                    <h4 class="h6 fw-bold mb-3">Price Range</h4>
+                                    <div class="price-slider mb-3">
+                                        <label for="priceMin" class="form-label small">Min: $<span id="priceMinValue">0</span></label>
+                                        <input type="range" class="form-range" id="priceMin" min="0" max="10000" value="0">
+                                        <label for="priceMax" class="form-label small">Max: $<span id="priceMaxValue">10000</span></label>
+                                        <input type="range" class="form-range" id="priceMax" min="0" max="10000" value="10000">
+                                    </div>
+                                </div>
+                                
+                                <!-- Rating Filter -->
+                                <div class="filter-section mb-4">
+                                    <h4 class="h6 fw-bold mb-3">Minimum Rating</h4>
+                                    <div class="rating-filters">
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="radio" name="ratingFilter" id="rating-all" value="0" checked>
+                                            <label class="form-check-label" for="rating-all">All Ratings</label>
+                                        </div>
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="radio" name="ratingFilter" id="rating-4" value="4">
+                                            <label class="form-check-label" for="rating-4">
+                                                <i class="bi bi-star-fill text-warning"></i> 4+ stars
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="radio" name="ratingFilter" id="rating-3" value="3">
+                                            <label class="form-check-label" for="rating-3">
+                                                <i class="bi bi-star-fill text-warning"></i> 3+ stars
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Availability Filter -->
+                                <div class="filter-section mb-4">
+                                    <h4 class="h6 fw-bold mb-3">Availability</h4>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="inStockOnly" checked>
+                                        <label class="form-check-label" for="inStockOnly">In Stock Only</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="freeShipping">
+                                        <label class="form-check-label" for="freeShipping">Free Shipping</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" onclick="applyAllFilters()">Apply Filters</button>
+                                    <button class="btn btn-outline-secondary" onclick="resetAllFilters()">Reset All</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Products Grid -->
+                    <div class="col-lg-9">
+                        <!-- Sorting and View Options -->
+                        <div class="card border-0 shadow-sm mb-4">
+                            <div class="card-body py-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span id="resultsCount" class="text-muted">Loading products...</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="d-none d-md-block">
+                                            <label for="sortSelect" class="form-label mb-0 me-2">Sort by:</label>
+                                            <select class="form-select form-select-sm w-auto" id="sortSelect" onchange="sortAllProducts(this.value)">
+                                                <option value="relevance">Relevance</option>
+                                                <option value="price-low">Price: Low to High</option>
+                                                <option value="price-high">Price: High to Low</option>
+                                                <option value="rating">Highest Rated</option>
+                                                <option value="popularity">Most Popular</option>
+                                                <option value="newest">Newest First</option>
+                                            </select>
+                                        </div>
+                                        <div class="btn-group btn-group-sm" role="group">
+                                            <button type="button" class="btn btn-outline-secondary active" onclick="changeView('grid')">
+                                                <i class="bi bi-grid"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary" onclick="changeView('list')">
+                                                <i class="bi bi-list"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Products Container -->
+                        <div class="row g-4" id="allProductsGrid">
+                            <!-- Products loaded dynamically -->
+                        </div>
+                        
+                        <!-- Loading State -->
+                        <div id="loadingProducts" class="text-center py-5">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <p class="mt-3 text-muted">Loading products...</p>
+                        </div>
+                        
+                        <!-- No Results -->
+                        <div id="noProductsFound" class="text-center py-5 d-none">
+                            <i class="bi bi-search fs-1 text-muted mb-3"></i>
+                            <h4>No products found</h4>
+                            <p class="text-muted">Try adjusting your filters or search for something else.</p>
+                            <button class="btn btn-primary" onclick="resetAllFilters()">Reset Filters</button>
+                        </div>
+                        
+                        <!-- Load More -->
+                        <div class="text-center mt-5" id="loadMoreContainer">
+                            <button class="btn btn-outline-primary" id="loadMoreBtn" onclick="loadMoreProducts()">
+                                <span id="loadMoreText">Load More Products</span>
+                                <span class="spinner-border spinner-border-sm d-none" id="loadMoreSpinner"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Categories -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold">Popular Categories</h2>
+                <div class="row g-4" id="featuredCategories">
+                    <!-- Featured categories loaded dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <!-- Copy footer from index.html -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/seo.js"></script>
+    
+    <script>
+        let allProducts = [];
+        let filteredProducts = [];
+        let currentView = 'grid';
+        let visibleCount = 12;
+        const productsPerLoad = 12;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAllProducts();
+            loadQuickCategories();
+            loadFeaturedCategories();
+            initPriceSlider();
+        });
+        
+        function loadAllProducts() {
+            fetch('data/products.json')
+                .then(response => response.json())
+                .then(products => {
+                    allProducts = products;
+                    filteredProducts = [...products];
+                    
+                    // Update results count
+                    document.getElementById('resultsCount').textContent = 
+                        `Showing ${Math.min(visibleCount, filteredProducts.length)} of ${filteredProducts.length} products`;
+                    
+                    // Render initial products
+                    renderProducts();
+                    
+                    // Hide loading state
+                    document.getElementById('loadingProducts').classList.add('d-none');
+                    
+                    // Show/hide load more button
+                    updateLoadMoreButton();
+                    
+                    // Load category filters
+                    loadCategoryFilters();
+                })
+                .catch(error => {
+                    console.error('Error loading products:', error);
+                    document.getElementById('loadingProducts').innerHTML = `
+                        <div class="alert alert-danger">
+                            <i class="bi bi-exclamation-triangle me-2"></i>
+                            Error loading products. Please try again later.
+                        </div>
+                    `;
+                });
+        }
+        
+        function loadQuickCategories() {
+            fetch('data/categories.json')
+                .then(response => response.json())
+                .then(categories => {
+                    const container = document.getElementById('quickCategories');
+                    const quickCategories = categories.slice(0, 8);
+                    
+                    container.innerHTML = quickCategories.map(category => `
+                        <div class="col-6 col-md-3">
+                            <a href="category.html?cat=${category.id}" class="text-decoration-none">
+                                <div class="card border-0 shadow-sm h-100 hover-lift">
+                                    <div class="card-body text-center p-3">
+                                        <div class="category-icon-small mb-2">
+                                            <i class="bi bi-${category.icon} fs-4 text-${category.color}"></i>
+                                        </div>
+                                        <div class="small fw-semibold">${category.name}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    `).join('');
+                });
+        }
+        
+        function loadFeaturedCategories() {
+            fetch('data/categories.json')
+                .then(response => response.json())
+                .then(categories => {
+                    const container = document.getElementById('featuredCategories');
+                    const featured = categories.slice(0, 4);
+                    
+                    container.innerHTML = featured.map(category => `
+                        <div class="col-md-3 col-sm-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body text-center p-4">
+                                    <div class="category-icon-large mb-3">
+                                        <div class="icon-wrapper bg-${category.color}-subtle rounded-circle p-3 d-inline-flex">
+                                            <i class="bi bi-${category.icon} fs-2 text-${category.color}"></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="h5 mb-2">${category.name}</h3>
+                                    <p class="text-muted small mb-3">${category.description.substring(0, 100)}...</p>
+                                    <a href="category.html?cat=${category.id}" class="btn btn-outline-primary btn-sm">
+                                        Browse Products
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('');
+                });
+        }
+        
+        function loadCategoryFilters() {
+            fetch('data/categories.json')
+                .then(response => response.json())
+                .then(categories => {
+                    const container = document.getElementById('categoryFilters');
+                    
+                    container.innerHTML = categories.map(category => `
+                        <div class="form-check mb-2">
+                            <input class="form-check-input category-filter" type="checkbox" 
+                                   id="filter-cat-${category.id}" value="${category.id}">
+                            <label class="form-check-label d-flex justify-content-between" 
+                                   for="filter-cat-${category.id}">
+                                <span>${category.name}</span>
+                                <span class="badge bg-light text-dark">${category.count || 0}</span>
+                            </label>
+                        </div>
+                    `).join('');
+                });
+        }
+        
+        function initPriceSlider() {
+            const priceMin = document.getElementById('priceMin');
+            const priceMax = document.getElementById('priceMax');
+            const priceMinValue = document.getElementById('priceMinValue');
+            const priceMaxValue = document.getElementById('priceMaxValue');
+            
+            priceMin.addEventListener('input', function() {
+                priceMinValue.textContent = this.value;
+                if (parseInt(this.value) > parseInt(priceMax.value)) {
+                    priceMax.value = this.value;
+                    priceMaxValue.textContent = this.value;
+                }
+            });
+            
+            priceMax.addEventListener('input', function() {
+                priceMaxValue.textContent = this.value;
+                if (parseInt(this.value) < parseInt(priceMin.value)) {
+                    priceMin.value = this.value;
+                    priceMinValue.textContent = this.value;
+                }
+            });
+        }
+        
+        function applyAllFilters() {
+            const minPrice = parseInt(document.getElementById('priceMin').value);
+            const maxPrice = parseInt(document.getElementById('priceMax').value);
+            const minRating = parseFloat(document.querySelector('input[name="ratingFilter"]:checked').value);
+            const inStockOnly = document.getElementById('inStockOnly').checked;
+            const freeShipping = document.getElementById('freeShipping').checked;
+            
+            // Get selected categories
+            const selectedCategories = Array.from(document.querySelectorAll('.category-filter:checked'))
+                .map(cb => cb.value);
+            
+            filteredProducts = allProducts.filter(product => {
+                // Price filter
+                const price = getBestProductPrice(product);
+                if (price < minPrice || price > maxPrice) return false;
+                
+                // Rating filter
+                if (minRating > 0 && (product.rating || 0) < minRating) return false;
+                
+                // Category filter
+                if (selectedCategories.length > 0 && !selectedCategories.includes(product.category)) return false;
+                
+                // In stock filter
+                if (inStockOnly) {
+                    const hasStock = product.retailers?.some(r => r.inStock);
+                    if (!hasStock) return false;
+                }
+                
+                // Free shipping filter (simplified - would need actual shipping data)
+                if (freeShipping) {
+                    const hasFreeShipping = product.retailers?.some(r => 
+                        r.shipping && r.shipping.toLowerCase().includes('free'));
+                    if (!hasFreeShipping) return false;
+                }
+                
+                return true;
+            });
+            
+            visibleCount = productsPerLoad;
+            renderProducts();
+            updateLoadMoreButton();
+        }
+        
+        function resetAllFilters() {
+            // Reset all checkboxes
+            document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+            
+            // Reset radio buttons
+            document.getElementById('rating-all').checked = true;
+            
+            // Reset price slider
+            document.getElementById('priceMin').value = 0;
+            document.getElementById('priceMax').value = 10000;
+            document.getElementById('priceMinValue').textContent = '0';
+            document.getElementById('priceMaxValue').textContent = '10000';
+            
+            filteredProducts = [...allProducts];
+            visibleCount = productsPerLoad;
+            renderProducts();
+            updateLoadMoreButton();
+        }
+        
+        function sortAllProducts(sortBy) {
+            switch(sortBy) {
+                case 'price-low':
+                    filteredProducts.sort((a, b) => getBestProductPrice(a) - getBestProductPrice(b));
+                    break;
+                case 'price-high':
+                    filteredProducts.sort((a, b) => getBestProductPrice(b) - getBestProductPrice(a));
+                    break;
+                case 'rating':
+                    filteredProducts.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+                    break;
+                case 'popularity':
+                    filteredProducts.sort((a, b) => (b.views || 0) - (a.views || 0));
+                    break;
+                case 'newest':
+                    filteredProducts.sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0));
+                    break;
+            }
+            
+            visibleCount = productsPerLoad;
+            renderProducts();
+        }
+        
+        function changeView(view) {
+            currentView = view;
+            
+            // Update active button
+            document.querySelectorAll('.btn-group .btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            renderProducts();
+        }
+        
+        function renderProducts() {
+            const container = document.getElementById('allProductsGrid');
+            const noResults = document.getElementById('noProductsFound');
+            
+            if (filteredProducts.length === 0) {
+                container.innerHTML = '';
+                noResults.classList.remove('d-none');
+                return;
+            }
+            
+            noResults.classList.add('d-none');
+            
+            const visibleProducts = filteredProducts.slice(0, visibleCount);
+            
+            if (currentView === 'grid') {
+                container.innerHTML = visibleProducts.map(product => renderProductCard(product)).join('');
+            } else {
+                container.innerHTML = visibleProducts.map(product => renderProductListCard(product)).join('');
+            }
+            
+            // Update results count
+            document.getElementById('resultsCount').textContent = 
+                `Showing ${Math.min(visibleCount, filteredProducts.length)} of ${filteredProducts.length} products`;
+        }
+        
+        function renderProductListCard(product) {
+            const bestPrice = getBestProductPrice(product);
+            const originalPrice = product.retailers?.[0]?.originalPrice || bestPrice;
+            const savings = calculateSavings(originalPrice, bestPrice);
+            
+            return `
+                <div class="col-12 mb-4">
+                    <div class="card product-list-card border-0 shadow-sm">
+                        <div class="row g-0">
+                            <div class="col-md-3">
+                                <a href="product-detail.html?id=${product.id}">
+                                    <img src="${product.image}" class="img-fluid rounded-start" alt="${product.name}" style="height: 200px; object-fit: cover;">
+                                </a>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body d-flex flex-column h-100">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <span class="badge bg-light text-dark border mb-2">${product.category}</span>
+                                            <h3 class="h5 card-title mb-2">
+                                                <a href="product-detail.html?id=${product.id}" class="text-decoration-none text-dark">
+                                                    ${product.name}
+                                                </a>
+                                            </h3>
+                                            <div class="mb-2">
+                                                ${generateStarRating(product.rating, product.reviewCount)}
+                                            </div>
+                                            <div class="mb-3">
+                                                <span class="text-muted">by ${product.brand}</span>
+                                            </div>
+                                        </div>
+                                        <div class="text-end">
+                                            <div class="h4 fw-bold text-primary mb-2">${formatCurrency(bestPrice)}</div>
+                                            ${originalPrice > bestPrice ? 
+                                                `<div class="text-muted text-decoration-line-through">${formatCurrency(originalPrice)}</div>` : ''}
+                                            ${savings && savings.percentage > 0 ? 
+                                                `<div class="text-success small">Save ${savings.percentage}%</div>` : ''}
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="card-text text-muted flex-grow-1">${product.description?.substring(0, 150)}...</p>
+                                    
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <div class="retailer-badges">
+                                            ${(product.retailers || []).slice(0, 3).map(retailer => `
+                                                <span class="badge bg-light text-dark border me-1">
+                                                    <i class="bi bi-${retailer.name === 'Amazon' ? 'amazon' : 'shop'} me-1"></i>
+                                                    ${formatCurrency(retailer.price)}
+                                                </span>
+                                            `).join('')}
+                                            ${(product.retailers || []).length > 3 ? 
+                                                `<span class="badge bg-light text-dark border">+${(product.retailers || []).length - 3} more</span>` : ''}
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-outline-primary btn-sm" 
+                                                    onclick="addToComparison('${product.id}')">
+                                                <i class="bi bi-plus-circle"></i> Compare
+                                            </button>
+                                            <a href="product-detail.html?id=${product.id}" class="btn btn-primary btn-sm">
+                                                View Details
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function loadMoreProducts() {
+            const btn = document.getElementById('loadMoreBtn');
+            const text = document.getElementById('loadMoreText');
+            const spinner = document.getElementById('loadMoreSpinner');
+            
+            // Show loading state
+            btn.disabled = true;
+            text.classList.add('d-none');
+            spinner.classList.remove('d-none');
+            
+            // Simulate loading delay
+            setTimeout(() => {
+                visibleCount += productsPerLoad;
+                renderProducts();
+                updateLoadMoreButton();
+                
+                // Reset button state
+                btn.disabled = false;
+                text.classList.remove('d-none');
+                spinner.classList.add('d-none');
+                
+                // Scroll to new products
+                const newProducts = document.querySelectorAll('.product-card, .product-list-card');
+                if (newProducts.length > 0) {
+                    const lastProduct = newProducts[newProducts.length - 1];
+                    lastProduct.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            }, 500);
+        }
+        
+        function updateLoadMoreButton() {
+            const container = document.getElementById('loadMoreContainer');
+            const btn = document.getElementById('loadMoreBtn');
+            
+            if (visibleCount >= filteredProducts.length) {
+                container.classList.add('d-none');
+            } else {
+                container.classList.remove('d-none');
+                btn.disabled = false;
+            }
+        }
+        
+        function getBestProductPrice(product) {
+            if (!product.retailers || product.retailers.length === 0) return 0;
+            const prices = product.retailers.filter(r => r.price > 0).map(r => r.price);
+            return prices.length > 0 ? Math.min(...prices) : 0;
+        }
+    </script>
+</body>
+</html>
