@@ -1,0 +1,220 @@
+[
+  {
+    "id": "1",
+    "name": "Apple MacBook Air M2 Chip",
+    "category": "electronics",
+    "subcategory": "laptops",
+    "brand": "Apple",
+    "description": "Supercharged by the next-generation M2 chip, the redesigned MacBook Air combines incredible performance and up to 18 hours of battery life into a durable aluminum enclosure.",
+    "image": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&auto=format&fit=crop",
+    "additionalImages": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w-800",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800"
+    ],
+    "features": [
+      "M2 chip with 8-core CPU and 8-core GPU",
+      "13.6-inch Liquid Retina display",
+      "Up to 18 hours of battery life",
+      "1080p FaceTime HD camera",
+      "MagSafe charging port"
+    ],
+    "specifications": {
+      "Processor": "Apple M2 chip",
+      "Memory": "8GB unified memory",
+      "Storage": "256GB SSD",
+      "Display": "13.6-inch Liquid Retina display",
+      "Graphics": "8-core GPU",
+      "Camera": "1080p FaceTime HD camera",
+      "Battery": "Up to 18 hours",
+      "Weight": "2.7 pounds",
+      "OS": "macOS Ventura"
+    },
+    "rating": 4.7,
+    "reviewCount": 1245,
+    "isBestSeller": true,
+    "isNew": false,
+    "views": 15000,
+    "reviewDate": "2024-01-15",
+    "createdAt": "2023-06-01",
+    "retailers": [
+      {
+        "name": "Amazon",
+        "price": 999.00,
+        "originalPrice": 1099.00,
+        "affiliateUrl": "https://amazon.com/dp/B0AV3B4X6S",
+        "inStock": true,
+        "shipping": "Free shipping",
+        "rating": 4.8
+      },
+      {
+        "name": "Best Buy",
+        "price": 999.00,
+        "originalPrice": 1099.00,
+        "affiliateUrl": "https://bestbuy.com/site/macbook-air",
+        "inStock": true,
+        "shipping": "Free shipping",
+        "rating": 4.7
+      },
+      {
+        "name": "Walmart",
+        "price": 1029.99,
+        "originalPrice": 1099.00,
+        "affiliateUrl": "https://walmart.com/ip/macbook-air",
+        "inStock": true,
+        "shipping": "Free shipping",
+        "rating": 4.6
+      }
+    ],
+    "reviews": [
+      {
+        "author": "John D.",
+        "rating": 5,
+        "date": "2024-01-10",
+        "title": "Excellent laptop for work and travel",
+        "content": "The battery life is amazing and performance is smooth for all my tasks.",
+        "verified": true
+      },
+      {
+        "author": "Sarah M.",
+        "rating": 4,
+        "date": "2024-01-05",
+        "title": "Great but expensive",
+        "content": "Love the design and performance, but wish it was more affordable.",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Ninja Foodi 8-in-1 Digital Air Fryer",
+    "category": "home-kitchen",
+    "subcategory": "kitchen-appliances",
+    "brand": "Ninja",
+    "description": "The Ninja Foodi 8-in-1 Digital Air Fryer combines 8 cooking functions in one versatile appliance. Air fry, roast, bake, reheat, dehydrate, and more with smart cooking programs.",
+    "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&auto=format&fit=crop",
+    "additionalImages": [],
+    "features": [
+      "8 cooking functions in 1",
+      "Digital display with smart programs",
+      "4-quart capacity",
+      "Easy-to-clean nonstick coating",
+      "Dishwasher-safe parts"
+    ],
+    "specifications": {
+      "Capacity": "4 quarts",
+      "Functions": "Air Fry, Roast, Bake, Reheat, Dehydrate",
+      "Power": "1550 watts",
+      "Dimensions": "12.4 x 10.2 x 11.8 inches",
+      "Weight": "11.5 pounds",
+      "Warranty": "1 year"
+    },
+    "rating": 4.5,
+    "reviewCount": 892,
+    "isBestSeller": true,
+    "isNew": true,
+    "views": 8500,
+    "reviewDate": "2024-01-20",
+    "createdAt": "2023-11-01",
+    "retailers": [
+      {
+        "name": "Amazon",
+        "price": 129.99,
+        "originalPrice": 149.99,
+        "affiliateUrl": "https://amazon.com/dp/B08C5FY4ZQ",
+        "inStock": true,
+        "shipping": "Free shipping with Prime",
+        "rating": 4.6
+      },
+      {
+        "name": "Target",
+        "price": 134.99,
+        "originalPrice": 149.99,
+        "affiliateUrl": "https://target.com/p/ninja-foodi",
+        "inStock": true,
+        "shipping": "Free shipping on $35+",
+        "rating": 4.5
+      },
+      {
+        "name": "Walmart",
+        "price": 127.99,
+        "originalPrice": 149.99,
+        "affiliateUrl": "https://walmart.com/ip/ninja-foodi",
+        "inStock": true,
+        "shipping": "Free shipping",
+        "rating": 4.4
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Mike R.",
+        "rating": 5,
+        "date": "2024-01-18",
+        "title": "Game changer for healthy cooking",
+        "content": "Makes crispy fries with barely any oil. Family loves it!",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Fitbit Charge 5 Fitness Tracker",
+    "category": "health-fitness",
+    "subcategory": "fitness-trackers",
+    "brand": "Fitbit",
+    "description": "Advanced health and fitness tracker with stress management, EDA sensor, built-in GPS, 24/7 heart rate tracking, and up to 7 days of battery life.",
+    "image": "https://images.unsplash.com/photo-1576243345690-4e4b79b63288?w=800&auto=format&fit=crop",
+    "additionalImages": [],
+    "features": [
+      "Stress management with EDA sensor",
+      "Built-in GPS for outdoor workouts",
+      "24/7 heart rate tracking",
+      "Sleep tracking with Sleep Score",
+      "Up to 7 days battery life"
+    ],
+    "specifications": {
+      "Display": "Color AMOLED touchscreen",
+      "Battery Life": "Up to 7 days",
+      "Water Resistance": "Up to 50 meters",
+      "Sensors": "GPS, HR, EDA, SpO2",
+      "Connectivity": "Bluetooth 5.0",
+      "Compatibility": "iOS & Android"
+    },
+    "rating": 4.3,
+    "reviewCount": 1543,
+    "isBestSeller": true,
+    "isNew": false,
+    "views": 12000,
+    "reviewDate": "2024-01-12",
+    "createdAt": "2023-09-01",
+    "retailers": [
+      {
+        "name": "Amazon",
+        "price": 149.95,
+        "originalPrice": 179.95,
+        "affiliateUrl": "https://amazon.com/dp/B09B9SB4JJ",
+        "inStock": true,
+        "shipping": "Free shipping",
+        "rating": 4.4
+      },
+      {
+        "name": "Best Buy",
+        "price": 149.99,
+        "originalPrice": 179.99,
+        "affiliateUrl": "https://bestbuy.com/site/fitbit-charge-5",
+        "inStock": true,
+        "shipping": "Free shipping",
+        "rating": 4.3
+      },
+      {
+        "name": "Target",
+        "price": 152.99,
+        "originalPrice": 179.99,
+        "affiliateUrl": "https://target.com/p/fitbit-charge-5",
+        "inStock": true,
+        "shipping": "Free shipping",
+        "rating": 4.2
+      }
+    ],
+    "reviews": []
+  }
+]
